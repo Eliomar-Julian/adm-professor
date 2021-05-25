@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/alterar.css') }}">
+    <div class="msg">
+        <h1>
+            Desculpe nada a alterar, você precisa gerar dados no perfil selecionado!
+        </h1>
+        <button onclick="redirecionar()">Gerar dados no perfil</button>
+        <button onclick="document.location.href = '/deletar'">Voltar</button>
+    </div>
+    <style>
+        .msg{
+            width: 60vw;
+            margin: auto;
+            background-color: teal;
+            color: red;
+            padding: 2%;
+            font-size: 15pt;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+<script>
+    function redirecionar(){
+    var url = document.location.pathname.slice(9);
+    document.location.replace(`/perfil/${url}`);
+    console.log(url);
+}
+</script>
+{% endblock %}

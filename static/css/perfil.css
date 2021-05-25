@@ -1,0 +1,68 @@
+.corpo-principal {
+    width: 90%;
+    margin: auto;
+    margin-left: 10%;
+}
+.div-tabela {
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    margin: auto;
+}
+.fotografia {
+    margin: auto;
+    width: 100px;
+    padding: 2%;
+}
+.descricao {
+    width: 90%;
+    margin: auto;
+    background-color: #282A36;
+    color: rgb(236, 221, 221);
+    font-size: 14pt;
+    font-weight: 200;
+    font-family: Arial, sans-serif;
+    padding: 2%;
+}
+.cabecalho {
+    color: white;
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 1%;
+}
+.conteudo {
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+   
+}
+.botao:hover{
+    transition: cubic-bezier(0.27, 0.49, 0.48, 0.97) 0.5s;
+    background-color: teal;
+}
+.botao {
+    cursor: pointer;
+    padding: 20pt;
+    border: 1px solid white;
+    background-color: #282A36;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color:rgb(226, 213, 213);
+    margin: auto;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+
+}
+.div-botao {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+
+

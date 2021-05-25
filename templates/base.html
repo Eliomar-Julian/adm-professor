@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <title> 
+        Adm Professor 
+    </title>
+</head>
+    <div id="menu">
+        <h1 style="color: white; text-align: center;">
+            <img src="{{ url_for('static', filename='img/icons/menu.svg') }}" 
+            style="filter: invert(100%);"> 
+            Menu
+        </h1>
+        <ul id="lista">
+            <a href="/" class="links-menu">
+                <li class="itens-menu">
+                    <img src="{{ url_for('static', filename='img/icons/home.svg') }}" 
+                    style="filter: invert(100%); margin-right: 10pt;">
+                    Início
+                </li>
+            </a>
+            <a href="/cadastrar" class="links-menu">
+                <li class="itens-menu">
+                    <img src="{{ url_for('static', filename='img/icons/perfil.svg') }}" 
+                    style="filter: invert(100%); margin-right: 10pt;">
+                    Registrar
+                </li>
+            </a>
+            <a href="/perfil" class="links-menu">
+                <li class="itens-menu">
+                    <img src="{{ url_for('static', filename='img/icons/lista.svg') }}" 
+                    style="filter: invert(100%); margin-right: 10pt;">    
+                    Listar alunos
+                </li>
+            </a>
+            <a href="/deletar" class="links-menu">
+                <li class="itens-menu">
+                    <img src="{{ url_for('static', filename='img/icons/deletar.svg') }}" 
+                    style="filter: invert(100%); margin-right: 10pt;">    
+                    Deletar/Alterar
+                </li>
+            </a>
+            <a href="/mais" class="links-menu">
+                <li class="itens-menu">
+                    <img src="{{ url_for('static', filename='img/icons/engrenagem.svg') }}" 
+                    style="filter: invert(100%); margin-right: 10pt;">    
+                    Outras opções
+                </li>
+            </a>            
+        </ul>
+    </div>
+    
+    {% block content %}
+    {# conteudo do bloco #}
+    {% endblock %}
+
+</html>

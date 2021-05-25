@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.principal{
+    width: 25vw;
+    margin: 1%;
+    background-color: teal;
+    height: auto;
+    float: left;
+    margin-top: 1%;
+    border-radius: 5px;
+    font-size: 14pt;
+    font-family: Arial, sans-serif;
+    color: rgb(167, 159, 159);
+    
+}
+.principal-2{
+    width: 25vw;
+    margin: 1%;
+    background-color: teal;
+    height: 25vh;
+    float: left;
+    margin-top: 1%;
+    border-radius: 5px;
+    font-size: 14pt;
+    font-family: Arial, sans-serif;
+    color: rgb(167, 159, 159);
+    
+}
+#principal-1 {
+    margin-left: 20%;
+    height: 55vh;
+}
+#explica {
+    background-color: #54004C;
+    color: rgb(196, 179, 179);
+    font-family: Arial, sans-serif;
+    padding: 1%;
+    width: 19vw;
+    height: 30vw;
+    position: absolute;
+    left: 75%;
+}
+#form-1 {
+    background-color: rgba(14, 14, 15, 0.462);
+    padding: 2%;
+    height: 45vh;
+    width: 90%;
+    margin: auto;
+}
+#form-2 {
+    background-color: rgba(14, 14, 15, 0.462);
+    padding: 2%;
+    height: 15vh;
+    width: 90%;
+    margin: auto;
+}
+button {
+    background-color: #282A35;
+    border: 1px solid white;
+    padding: 2%;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+    color: white;
+    margin: auto;
+}
+input {
+    margin-top: 2%;
+}
+#mais {
+    padding: 5%;
+}
+#temas {
+    width: 25vw;
+    height: 30vh;
+    position: absolute;
+    background-color: teal;
+    left: 47%;
+    top: 35%;
+    border-radius: 5px;    
+}
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+.fundo {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+.menu {
+    background-color: purple;
+    width: max-content;
+    padding: 1%;
+    color: white;
+    height: 100%;
+}
+.texto {
+    position: absolute;
+    width: 50%;
+    top: 13%;
+    left: 34%;
+}
+label{
+    margin: auto;
+    color: white;
+}
+#tema {
+    background-color: rgba(12, 11, 11, 0.476);
+    display: flex;
+    align-items: center;
+}

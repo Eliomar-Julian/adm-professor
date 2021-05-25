@@ -1,0 +1,155 @@
+body {
+    overflow-x: hidden;
+}
+.listar {
+    width: 40%;
+    margin: auto auto auto 20%;
+    height: auto;
+    overflow-y: none;
+    padding-bottom: 5%;
+    overflow-y: auto;
+    border-right: 1px solid white;
+    padding-right: 10%;
+}
+.btns{
+    width: 22vw;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-left: 20%;
+    margin-top: -3%;
+    padding: 2%;
+    padding-bottom: 1%;
+    position: relative;
+    background-color: #3447477b;
+}
+.lis {
+    text-align: left;
+    max-height: 15vh;
+    margin: 1%;
+    background: teal;
+    padding: 0px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    list-style: none;
+    border-radius: 5px;
+}
+#mensagem-delete {
+    display: none;
+    color: rgb(233, 223, 223);
+    background-color: #54004C;
+    width: 20vw;
+    position: fixed;
+    height: 20vh;
+    border-radius: 10px;
+    left: 40%;
+    top: 30%;
+    padding: 2%;
+}
+.subtitulo {
+    text-align: center;
+    width: 100%;
+    color: red;
+    margin-top: 0px;
+    padding: 1%;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.x {
+    float: right;
+    font-weight: bold;
+    font-family:'Courier New', sans-serif;
+    font-size: 12pt;
+    text-align: center;
+    padding: 1%;
+    margin: 1px;
+}
+.x:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+p {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+#mensagem-delete .botoes {
+    width: max-content;
+    padding: 1%;
+    margin-left: 60%;
+    margin-top: 20%;
+    background-color: #54004C;
+    border: none;
+}
+h3 {
+    font-size: 14pt;
+    margin: auto;
+    padding: 0px;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    margin: 5% 0px;
+    padding: 0px;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+button {
+    cursor: pointer;
+    color: black;
+}
+.selecao {
+    width: 10vw;
+    padding: 1%;
+    border: none;
+    font-weight: 300;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #7b6079;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #de8971;
+    border-radius: 2px;    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(117, 12, 12, 0.489);
+  }
+
+.botoes{
+    border: 1px solid white;
+    padding: 2%;
+    margin: auto;
+    color: white;
+    background-color: #282A36;
+    width: max-content;
+    height: 1%;
+}
+.lateral {
+    width: 20vw;
+    height: auto;
+    background-color: #54004C;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 2%;
+    text-align: left;
+    border-radius: 5px;
+    color: rgb(184, 173, 173);
+    font-family: Arial, sans-serif;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.374);
+}

@@ -1,0 +1,72 @@
+.corpo {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    display: flexbox;
+    align-items: center;
+}
+.bem-vindo {
+    color: rgb(235, 225, 225);
+    text-align: center;
+    font-size: 25pt;
+    font-family: Arial, sans-serif;
+}
+.artigo {
+    background-color: #54004C;
+    padding: 10px;
+    word-wrap: break-word;
+    border-radius: 10px;
+}
+.paragrafo {
+    font-family: Verdana, sans-serif;
+    font-size: 14pt;
+    color: rgb(230, 211, 211);
+    text-indent: 15pt;
+    padding: 10px;
+}
+.seta {
+    color: white;
+    text-align: center;
+    font-size: 50pt;
+    font-weight: bold;
+    max-height: 20px;
+}
+.div-images {
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+    background-color: transparent;
+    text-align: center;
+}
+.images {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: teal;
+    display: inline-block;
+    margin: 2%;
+}
+#aluna {
+    background-image: url("../img/icons/add_grupo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
+#ame {
+    background-image: url("../img/icons/gerenciamento.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
+#despertador {
+    background-image: url("../img/icons/procurar_pessoas.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
+#estatisticas {
+    background-image: url("../img/icons/cara.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}

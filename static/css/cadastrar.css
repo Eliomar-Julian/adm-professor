@@ -1,0 +1,80 @@
+@charset "utf-8";
+#cadastrar {
+    width: 45vw;
+    margin: 2% auto;
+    background-color: teal;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: rgb(211, 15, 15);
+    font-size: 14pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-right: 1px solid white;
+}
+.mensagem-erro {
+    color: red;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    text-align: center;
+    display: none;
+}
+input[type=text] {
+    width: 90%;
+    margin: 10px;
+    height: 25pt;
+}
+input[type=number] {
+    width: 90%;
+    margin: 10px;
+    height: 25pt;
+}
+fieldset {
+    width: 90%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    border-collapse: collapse;
+    background-color: #54004C;
+    color: white;
+}
+input[type=file] {
+    width: max-content;
+    height: 25pt;
+    padding: 10px;
+    margin-top: 10pt;
+}
+input[type=radio] {
+    margin-left: 1%;
+    
+}
+input {
+    height: 25pt;
+}
+input[type=button] {
+    margin-top: 10pt;
+}
+select {
+    height: 25pt;
+    margin-top: 10pt;
+}
+label {
+    margin-left: 15%;
+    word-wrap: break-word;
+}
+h1 {
+    text-align: center;
+}
+.lateral {
+    width: 20vw;
+    height: auto;
+    background-color: #54004C;
+    color: rgb(198, 190, 190);
+    font-family: Arial, sans-serif;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.523);
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    border-radius: 5px;
+    padding: 1%;
+}

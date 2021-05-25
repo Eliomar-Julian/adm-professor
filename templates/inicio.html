@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+    <div class="corpo">
+        <h3 class="bem-vindo">Bem vindo ao programa de gestão escolar</h3>
+        <div class="explicacao">
+            <article class="artigo">
+                <p class="paragrafo">
+                    Este é um programa escolar de gestão de alunos voltado ao professor
+                    para que o mesmo consiga gerenciar as notas e atividades de seus alunos
+                    de maneira rápida e prática sem usar um monte de papéis desnecessários. <br>
+                    ADICIONE, ALTERE, IMPRIMA, ORGANIZE, sem preocupação ou dor de cabeça. <br>
+                    Para acessar as diferentes áreas do programa navegue pelo menu lateral à esquerda. <br> 
+                    <p class="seta">&#8592;</p>
+                </p>
+            </article>
+        </div>
+        <div class="div-images">
+            <a href="/cadastrar"><div id="aluna" class="images"></div></a>
+            <a href="/deletar"><div id="ame" class="images"></div></a>
+            <a href="/perfil"><div id="despertador" class="images"></div></a>
+            <a href="/mais"><div id="estatisticas" class="images"></div></a>
+        </div>
+    </div>
+</body>
+{% endblock %}

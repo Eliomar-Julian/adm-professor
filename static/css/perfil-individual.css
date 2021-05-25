@@ -1,0 +1,164 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+.corpo-perfil {
+    width: 50vw;
+    margin: auto auto auto 20vw;
+    background-color: teal;
+    padding: 20pt;
+}
+.tabela-perfil-individual {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+.tabela2{
+    width: 50vw;
+    margin: auto auto auto 20vw;
+    background-color: teal;
+    padding: 20pt;
+    /*border: 1px solid white;*/
+}
+.tabela2 table{
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15pt;
+
+}
+.tabela2 th {
+    color: rgb(226, 213, 213);
+}
+th {
+    font-size: 12pt;
+    color: rgb(224, 208, 208);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+td {
+    border-right: 1px solid rgb(253, 5, 5);
+    border: 1px solid white;
+    padding: 10px;
+    color:rgb(224, 208, 208);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 10px;
+    border-collapse: collapse;
+}
+.img {
+    width: 100%;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+}
+h1 {
+    font-size: 20pt;
+    color: rgb(230, 214, 214);
+    font-family: Arial, sans-serif;
+}
+select {
+    width: 91%;
+    margin-left: 10px;
+}
+
+input[type=text] {
+    width: 90%;
+    margin: 10px;
+    height: 25pt;
+}
+input[type=number] {
+    width: 90%;
+    margin: 10px;
+    height: 25pt;
+}
+fieldset {
+    width: 90%;
+    margin-left: 2%;
+}
+input[type=file] {
+    width: max-content;
+    height: 25pt;
+    padding: 10px;
+    margin-top: 10pt;
+}
+input[type=radio] {
+    margin-left: 2%;
+}
+input {
+    height: 25pt;
+}
+input[type=button] {
+    margin-top: 10pt;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+}
+select {
+    height: 25pt;
+    margin-top: 10pt;
+}
+.botao {
+    width: max-content;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: #282A36;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color:rgb(226, 213, 213);
+    padding: 2%;
+    margin: auto;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+}
+.botao:hover {
+    transition: cubic-bezier(0.27, 0.49, 0.48, 0.97) 0.5s;
+    background-color: teal;
+}
+.div-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 3%;
+}
+.div-infos {
+    background-color: #54004C;
+    position: fixed;
+    width: 20vw;
+    height: 60vh;
+    top: 10vh;
+    left: 75vw;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #282A35;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3c3f4f;
+    border-radius: 5px;    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(117, 12, 12, 0.489);
+  }
+table {
+    margin: auto;
+}

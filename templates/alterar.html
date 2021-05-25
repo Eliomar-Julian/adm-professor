@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{# 1, '1º Trimestre', None, 8.0, 'aaa', 10.0 #}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/alterar.css') }}">
+<body onload="mudando()">
+<div class="corpo">
+    <form action="" method="POST">
+        {% if var %}
+            <table class="tabela">
+                <legend>{# nome aqui.. #}</legend>
+                <th>Id</th>
+                <th>Trimestre</th>
+                <th>Atividade</th>
+                <th>Nota</th>
+                <th>valor</th>
+                <input type="hidden" name="retorno" value="">
+                {% for x in var %}
+                    <tr>
+                        <td>
+                            <input type="text" disabled name="id" value="{{ x.0 }}">
+                        </td>
+                        <td>
+                            <input name="tri" type="text" value="{{ x.1 }}">
+                        </td>
+                        <td>
+                            <input name="ati" type="text" value="{{ x.4 }}" maxlength="10">
+                        </td>
+                        <td>
+                            <input name="not" type="number" step="0.1" value="{{ x.3 }}">
+                        </td>
+                        <td>
+                            <input name="val" type="number" step="0.1" value="{{ x.5 }}">
+                        </td>
+                    </tr>
+                {% endfor %}
+            
+            </table>
+            <button type="button" name="bot" onclick="confirmar()" 
+                    title="alterar dados" title="atualizar dados">
+                Confirmar alteração
+            </button>
+        {% else %}
+            <h3 class="sem">Sem registro de dados</h3>
+        {% endif %}
+        <button type="button" name="bot" onclick="voltar()" title="voltar a pagina de remoção">
+            Ir à remoções
+        </button>
+        <button type="button" name="bot" onclick="redirecionar()" title="adicione dados ao registro">
+            Acrescentar
+        </button>
+    </form>
+</div>
+<div class="explica">
+    <p>
+        <strong>
+            Altere os dados inseridos
+        </strong>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Altere os dados inseridos de forma indevida e atualize a base de dados. 
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Por segurança só é possivel alterar e não remover dados dos alunos, caso 
+        seja necessário
+        <i style="color: orange;">
+            delete
+        </i> 
+        o perfil e recadastre o mesmo. 
+        <br>
+        <strong style="color: red;"> 
+            &nbsp;&nbsp;&nbsp;&nbsp;Atenção: 
+        </strong> 
+        antes de deletar um perfil verifique se não há 
+        coisas que não devem ser apagadas pois não será possível recuperar dados após a remoção.
+    </p>
+</div>
+<script src="{{ url_for('static', filename='js/alterar.js') }}"></script>
+</body>
+{% endblock %}

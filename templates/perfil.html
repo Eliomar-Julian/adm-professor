@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
+<body>
+    
+    <div class="corpo-principal">
+        <div class="fotografia">
+            {% if var.foto %}
+            <img width="100" height="100" src="{{ url_for('static', filename='img/uploads/' + var.foto) }}" alt="foto">
+            {% endif %}
+        </div>
+        <div class="div-tabela">
+            <h1 style="color: teal; font-family: Arial, sans-serif; text-align: center;">Cadastrado</h1>
+            <table class="descricao">
+                <th class="cabecalho">Nome</th>
+                <th class="cabecalho">Turno</th>
+                <th class="cabecalho">Turma</th>
+                <th class="cabecalho">Materia</th>
+                <th class="cabecalho">CPF</th>
+                <th class="cabecalho">RG</th>
+                <tr>
+                    <td class="conteudo">{{ var.nome }}</td>
+                    <td class="conteudo">{{ var.turno }}</td>
+                    <td class="conteudo">{{ var.turma }}</td>
+                    <td class="conteudo">{{ var.materia }}</td>
+                    <td class="conteudo">{{ var.cpf }}</td>
+                    <td class="conteudo">{{ var.rg }}</td>
+                </tr>
+                <tr>
+            </table>
+            <div class="div-botao">
+                <button class="botao" onclick="window.location.href = '/'"> &nbsp;&nbsp;&nbsp; inicio &nbsp;&nbsp;&nbsp;<br>  </button>
+                <button class="botao" onclick="window.location.href = '/cadastrar'">Cadastrar outro</button>
+                <button value="Ir para o perfil" class="botao" onclick="window.location.href = '/perfil/{{ var.nome }}'">Ir para o perfil</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+{% endblock %}

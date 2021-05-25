@@ -1,0 +1,87 @@
+.corpo {
+    width: 50vw;
+    height: auto;
+    background-color: teal;
+    margin: auto;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+.tabela {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+legend {
+    font-size: 15pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    margin: 1%;
+}
+h3 {
+    font-size: 15pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+button {
+    border: 1px solid white;
+    color: white;
+    background-color: #282A36;
+    padding: 2%;
+    font-family: Arial, sans-serif;
+    margin: 2%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14pt;
+}
+td {
+    border: 1px solid white;
+    font-size: 12pt;
+    margin: 1%;
+    padding: 2%;
+    
+}
+input[type=text] {
+    font-size: 11pt;
+    color: black;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+}
+
+input[type=number] {
+    font-size: 11pt;
+    color: black;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+}
+th {
+    font-family: Arial, sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+}
+.explica {
+    width: 20vw;
+    position: absolute;
+    background-color: #54004C;
+    left: 77%;
+    top: 10%;
+    box-shadow: 1px 1px 5px rgba(211, 200, 200, 0.523);
+}
+.explica p {
+    font-size: 12pt;
+    color: rgb(206, 194, 194);
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    text-align: left;
+    padding: 1%;
+}
+

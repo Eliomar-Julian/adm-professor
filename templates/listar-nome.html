@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/listar-perfis.css') }}">
+    <div class="principal-perfis">
+    {% if var %}
+        {% for x in var %}
+            <div class="div-lista">
+                <a href="/perfil/{{ x[4] }}">
+                    {% if x[2] %}
+                    <div class="img-conteiner">
+                        <img class="img" src="{{ url_for('static', filename='img/uploads/' + x[2]) }}" 
+                        alt="" class="foto-p">
+                    </div>
+                    {% endif %}
+                    <h3 class="nome-pessoa">
+                        {{ x[4]|title }}
+                    </h3>
+                    <p>
+                        Turno: {{ x[0]|upper }}
+                    </p>
+                    <p>
+                        Turma: {{ x[1]|upper }}
+                    </p>
+                    <p>
+                        Disciplina: {{ x[3]|upper }}
+                    </p>
+                </a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h1 style="color: white; text-align: center;">
+            Sem alunos cadastrados
+        </h1>
+    {% endif %}
+    </div>
+    <div class="atalhos">
+        <div class="buscar">
+            <form action="" method="POST">
+                <input type="search" name="busca" id="busca">
+                <input type="submit" value="Organize" id="submit">
+                <br>
+                <h3 class="nome-pessoa" style="background-color: transparent;">
+                    Organizar buscas por
+                </h3>
+                <div class="inputs">
+                    Disciplina
+                    <input type="radio" name="radio" value="disciplina">
+                    Turma
+                    <input type="radio" name="radio" value="turma">
+                    Turno
+                    <input type="radio" name="radio" value="turno">
+                    Nome
+                    <input type="radio" name="radio" checked="checked" value="nome">
+                </div>
+            </form>
+        </div>
+        <h3 style="margin: 10px;background-color: #ab4b3f;" class="nome-pessoa">Atallhos rápidos</h3>
+            <table class="tabela-atalhos">
+                <th>
+                    Turma
+                </th>
+                <th>
+                    Turno
+                </th>
+                <th>
+                    Disci
+                </th>
+                {% set turma = [] %}
+                {% set turno = [] %}
+                {% set disci = [] %}
+                {% for x in var %}
+                    <tr>
+                        {% if x[1] not in turma %}
+                            <td onclick="filtrar(1, '{{ x[1] }}')"><a> {{ x[1] }}</td>
+                            {% set turma = turma.append(x[1]) %}
+                        {% endif%}
+                        {% if x[0] not in turno %}
+                            <td onclick="filtrar(2, '{{ x[0] }}')"> {{ x[0] }}</td>
+                            {% set turno = turno.append(x[0]) %}
+                        {% endif %}
+                        {% if x[3] not in disci %}
+                            <td onclick="filtrar(0, '{{ x[3] }}')"> {{ x[3] }}</td>
+                            {% set disci = disci.append(x[3]) %}
+                        {% endif%}
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    </div>
+    <div class="explica">
+        <p class="texto">
+            <strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;Veja nesta página a lista de alunos cadastrados
+            </strong>
+            clique em cada perfil para ver mais detalhes e acrescentar notas e atividades
+            realizadas pelo aluno. 
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Organize por turma, disciplina ou turno clicando em um dos 
+            <i style="color: orange;">
+                links
+            </i>
+            acima.
+        </p>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+{% endblock %}

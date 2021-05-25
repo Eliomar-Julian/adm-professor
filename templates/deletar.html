@@ -1,0 +1,93 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<body ondblclick="autoOrganizar()">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/deletar.css') }}">
+<div class="listar">
+    <form method="get" id="form">
+        <ul>
+            <select name="selecao" class="selecao">
+                <option value="">
+                    Todos
+                </option>
+                {% set nao = [] %}
+                {% for tupla in var %}
+                    {% if tupla[1] not in nao %}
+                        <option value="{{ tupla.1 }}">
+                            {{ tupla[1]|upper }}
+                        </option>
+                    {% endif %}
+                    {% set nao = nao.append(tupla[1]) %}
+                {% endfor %}
+            
+            </select>
+            <input type="button" class="botoes" onclick="organizar(this)" value="Organizar &#9782;">
+            <input type="button" class="botoes" onclick="window.history.back(true)" value="voltar &#x1F519;">
+            <input style="background-color: red;" type="button" 
+            class="botoes" name="todos" onclick="checar()" value="Deletar selecionados">
+            <i style="font-size: 16pt;color: green;">
+                &#9745;
+            </i>
+            
+            {% for tupla in var|sort %}
+                <div >
+                    <li class="lis">
+                        <h3 style="background-color: #374747; padding: 1%; width: 80%; border-radius: 10px; text-align: center;">
+                            {{ tupla.4|title }}
+                        </h3>
+                        <h3 style="color: red; font-size: 12pt;">
+                            {{ tupla.0|upper }}
+                        </h3>
+                        <h3 style="color: red; font-size: 12pt; margin-bottom: 2%;">
+                            {{ tupla.1|upper }}
+                        </h3>
+                        
+                        <div class="btns">
+                            <button class="botoes" type="button" name="deletar" value="{{ tupla.4 }}" onclick="abrirMsg(this)">
+                                Deletar &#128465; 
+                            </button>
+                            <button class="botoes" type="button" name="alterar" value="{{ tupla.4 }}" onclick="mudar(this)">
+                                Alterar &#x1F5D2;
+                            </button>
+                            <input type="checkbox" name="checado" value="{{ tupla.4 }}"> Marque para excluir
+                        </div>
+                    </li>
+                </div>
+            {% endfor %}
+        
+        
+        </ul>
+    </form>
+</div>
+<div id="mensagem-delete">
+    <h3 class="subtitulo">Deletar<div class="x" onclick="fecharX()">
+        x
+    </div>
+    </h3>
+    <p class="pergunta"> </p>
+    <div class="botoes">
+        <button onclick="deletarSim()">
+            Sim
+        </button>
+        <button onclick="deletarNao()">
+            Não
+        </button>
+    </div>
+</div>
+<div class="lateral">
+    <h3>Dê um duplo clique em qualquer área antes da linha vertical branca 
+        para reorganizar por turma selecionada
+    </h3>
+    <p>
+        Organize seus alunos por turma, altere os dados das atividades recentes
+        e delete perfis únicos ou vários de uma única vez. <br>
+        Cuidado ao marcar vários perfis para a remoção, após clicar em "deletar selecionados"
+        não é mais possivel recuperar os dados deletados. <br>
+        Para evitar remoção indesejada de dados faça <i>backups</i> periódicos
+        de sua base de dados <strong>Mysql</strong>.
+    </p>
+</div>
+<script src="{{ url_for('static', filename='js/deletar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/alterar.js') }}"></script>
+</body>
+{% endblock %}

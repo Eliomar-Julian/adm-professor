@@ -17,7 +17,7 @@ Um programa de gestão escolar voltado ao professor, rode localmente e facilite 
     - __[https://www.python.org/downloads/](https://www.python.org/downloads/)__
 - __Bibliotecas do Python3__:
     - windows `pip install -r requirements.txt` || linux `pip3 install -r requirements` <br> 
-    ou se preferir, acesse os links [Flask](https://pypi.org/project/Flask/) e [Mysql connector](https://pypi.org/project/mysql-connector-python/)
+    ou se preferir, acesse os links [Flask](https://pypi.org/project/Flask/) e [Mysql connector](https://pypi.org/project/mysql-connector-python/) ainda se preferir ative o ambiente virtual com os comandos `[source] bin/activate`
 
 ### Configurando:
 Após instalar e configurar o servidor mysql, crie um database chamado __escola__.

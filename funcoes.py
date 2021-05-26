@@ -63,36 +63,30 @@ def funcao_perfil_listar():
 
 
 def funcao_perfil_unico(nome):
-    if request.method == 'GET':
-        perfil_ = Insert()
-        perfil_.insere_perfil(nome_=nome)
-        dados = perfil_.pegar_tudo(nome)
-        dados_cadastrais = dados[0][0]
-        dados_perfil = dados[1]
-        var = dict()
-        var['cabecalhos'] = ('TURNO', 'TURMA', 'MATERIA', 'CPF', 'RG')
-        var['cadastro'] = dados_cadastrais
-        var['perfil'] = dados_perfil
-        return render_template('perfil-individual.html', var=var)
-    elif request.method == 'POST':
-        perfil_ = Insert()
-        dados = perfil_.pegar_tudo(nome)
-        dados_cadastrais = dados[0][0]
-        dados_perfil = dados[1]
-        var = dict()
-        var['cabecalhos'] = ('TURNO', 'TURMA', 'MATERIA', 'CPF', 'RG')
-        var['cadastro'] = dados_cadastrais
-        var['perfil'] = dados_perfil
+    perfil_ = Insert()
+    dados = perfil_.pegar_tudo(nome)
+    dados_cadastrais = dados[0][0]
+    dados_perfil = dados[1]
+    perfil_.insere_perfil(nome_=nome)
+    var = dict()
+    var['cabecalhos'] = ('TURNO', 'TURMA', 'MATERIA', 'CPF', 'RG')
+    var['cadastro'] = dados_cadastrais
+    var['perfil'] = dados_perfil
+    if request.method == 'POST':
         nome = request.form['nome-pessoa']
         atividade = request.form['atividade']
         periodo = request.form['periodo']
         objetivo = request.form['objetivo']
         nota = request.form['nota']
-        perfil_.insere_dados_perfil(
-            nome, periodo, nota, 
-            atividade, objetivo
-        )
+        perfil_.insere_dados_perfil(nome, periodo, nota, atividade, objetivo)
+        dados = perfil_.pegar_tudo(nome)
+        dados_cadastrais = dados[0][0]
+        dados_perfil = dados[1]
+        var['cadastro'] = dados_cadastrais
+        var['perfil'] = dados_perfil
         return render_template('perfil-individual.html', var=var)
+
+    return render_template('perfil-individual.html', var=var)
 
 
 # // tela de cadastro

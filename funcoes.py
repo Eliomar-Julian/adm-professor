@@ -64,15 +64,17 @@ def funcao_perfil_listar():
 
 def funcao_perfil_unico(nome):
     perfil_ = Insert()
+    perfil_.insere_perfil(nome_=nome)
     dados = perfil_.pegar_tudo(nome)
     dados_cadastrais = dados[0][0]
     dados_perfil = dados[1]
-    perfil_.insere_perfil(nome_=nome)
     var = dict()
     var['cabecalhos'] = ('TURNO', 'TURMA', 'MATERIA', 'CPF', 'RG')
     var['cadastro'] = dados_cadastrais
     var['perfil'] = dados_perfil
+        
     if request.method == 'POST':
+        perfil_ = Insert()
         nome = request.form['nome-pessoa']
         atividade = request.form['atividade']
         periodo = request.form['periodo']
@@ -85,7 +87,6 @@ def funcao_perfil_unico(nome):
         var['cadastro'] = dados_cadastrais
         var['perfil'] = dados_perfil
         return render_template('perfil-individual.html', var=var)
-
     return render_template('perfil-individual.html', var=var)
 
 

@@ -1,160 +1,115 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<body>
+<body onload="calculaMedia()">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil-individual.css') }}">
     <div class="corpo-perfil">
         <div class="img">
-
             {% if var.cadastro[2] %}
                 <img src="{{ url_for('static', filename='img/uploads/' + var.cadastro[2]) }}" 
-                width="100" height="100">
+                    width="100" height="100">
             {% endif %}
-
-            <h1 value="{{ var.cadastro[4] }}" id="pessoa">
-                {{ var.cadastro[4] }}
-            </h1>
+            <h1 value="{{ var.cadastro[4] }}" id="pessoa">{{ var.cadastro[4] }}</h1>
         </div>
-        
         <table class="tabela-perfil-individual" id="tabela-1">
-
-            {% for x in var.cabecalhos %}<th>{{ x }}</th>{% endfor %}
-            <tr>
+            {% for x in var.cabecalhos %}<th>{{ x }}</th>{% endfor %}<tr>
             {% for x in var.cadastro %}
-                {% if x != var.cadastro[2]  and x != var.cadastro[4]%}
-                    <td class="infos">{{ x }}</td>
-                {% endif %}
+                {% if x != var.cadastro[2]  and x != var.cadastro[4]%}<td class="infos">{{ x }}</td>{% endif %}
             {% endfor %}
             </tr>
         </table>
     </div>
+    <div class="info">
+        <p>
+            Insira à esquerda as atividade e notas de seus alunos, veja o desempenho e imprima
+            ou salve um PDF com o histórico do aluno de uma maneira cômoda..
+            <br> <span style="color: red;"> Atenção:</span> não dê &lt;F5&gt; na página invés disso caso precise clique
+            no botão "Atualizar tabela" destacado em amarelo. <br>
+            Caso pressione &lt;F5&gt; imediatamente após inserir dados ao perfil do aluno, os valores
+            inseridos serão duplicados devido ao cache do sistema sendo necessário antes apertar "Atualizar tabela". 
+            <br> <span style="color: yellow;"> Caso duplique dados como notas do aluno a unica alternativa é ir a opção 
+            "Alterar dados" e zerar uma das notas duplicadas.</span>
+        </p>
+    </div>
     <div class="tabela2">
         <table id="tabela">
-            <th>
-                id
-            </th>
-            <th>
-                Periodo
-            </th>
-            <th>
-                nota
-            </th>
-            <th>
-                atividade
-            </th>
-            <th>
-                objetivo
-            </th>
+            <th>id</th><th>Periodo</th><th>nota</th><th>atividade</th><th>objetivo</th>
         <tr>
-            {% for x in var.perfil %}
-                <tr>
-                    {% for y in x %}
-                        {% if y != x[2] %}<td>{{ y }}</td>{% endif %}
-                    {% endfor %}
-                </tr>
+            {% for x in var.perfil %}<tr>
+                    {% for y in x %}{% if y != x[2] %}<td>{{ y }}</td>{% endif %}{% endfor %}</tr>
             {% endfor %}
         </tr>
         </table>
         <div class="div-btn">
-            <button class="botao" onclick="printData()">
-                imprimir
+            <button class="botao" onclick="printData()">imprimir</button>
+            <button style="background-color: rgb(216, 185, 11); color: red;" class="botao" title="clique para atualizar a tabela" 
+                    onclick="atualizar()">
+                    Atualizar tabela
             </button>
-            <button class="botao" title="clique para atualizar a tabela" onclick="atualizar()">
-                Atualizar tabela
-            </button>
-            <button class="botao" onclick="back()"> 
-                Voltar à página anterior 
-            </button>
-            <button class="botao" onclick="window.location.replace('/alterar/{{ var.cadastro[4] }}')"> 
-                Alterar dados
+            <button class="botao" onclick="back()"> Voltar à página anterior </button>
+            <button class="botao" 
+                    onclick="window.location.replace('/alterar/{{ var.cadastro[4] }}')"> 
+                    Alterar dados
             </button>
         </div>
-        <h1 style="color: red;">
-            Insira dados das atividades abaixo
-        </h1>
+        <h1 style="color: red;">Insira dados das atividades abaixo</h1>
         <form action="" method="POST">
             <input autocomplete="off" type="hidden"  name="nome-pessoa" value="{{ var.cadastro[4] }}">
             <input autocomplete="off" type="text" name="atividade" placeholder="Atividade" 
-                max="10" maxlength="10">
-            <br>
+                max="10" maxlength="10"><br>
             <select autocomplete="off" name="periodo" id="periodo" title="escolha o trimestre">
-                <option value="1º Trimestre">
-                    1º Trimestre
-                </option>
-                <option value="2º Trimestre">
-                    2º Trimestre
-                </option>
-                <option value="3º Trimestre">
-                    3º Trimestre
-                </option>
-                <option value="4º Trimestre">
-                    4º Trimestre
-                </option>
+                <option value="1º Trimestre">1º Trimestre</option>
+                <option value="2º Trimestre">2º Trimestre</option>
+                <option value="3º Trimestre">3º Trimestre</option>
+                <option value="4º Trimestre">4º Trimestre</option>
             </select>
             <input autocomplete="off" type="number" step="0.1" name="objetivo" placeholder="Valor da atividade">
             <br>
             <input autocomplete="off" type="number" step="0.1" name="nota" placeholder="Nota atingida">
-            <input type="submit" value="Confirmar" autocomplete="off">
+            <input type="submit"  value="Confirmar" autocomplete="off">
         </form>
     </div>
     <div class="div-infos">
-        <table>
-            <th>
-                atividade
-            </th>
-            <th>
-                Periodo
-            </th>
-            <th>
-                Nota
-            </th>
-            <th>
-                Valor
-            </th>
+        <table id="infos">
+            <th>atividade</th><th>Periodo</th><th>Nota</th><th>Valor</th>
         <tr>
             {% set total = [] %}
             {% for x in var.perfil %}
-            
-                <tr>
+            <tr>
                 <td style="word-wrap: break-word;">
                     {{ x.4 }}
                 </td>
-                <td>
-                    {{ x.1 }}
-                </td>
-            
-            {% if x.3 < (x.5 / 2) %} 
-                <td style="color: red;">{{ x.3 }}</td>
-                {% set total = total.append(x.3|float) %}
-            {% elif x.3 > (x.5 / 2) and x.3 < (x.5 / 1.2) %}
-                <td style="color: orange;">{{ x.3 }}</td>
-                {% set total = total.append(x.3|float) %}
-            {% else %}
-                <td style="color: teal;">{{ x.3 }}</td>
-                {% set total = total.append(x.3|float) %}
-            {% endif%}
-            
-                <td>{{ x.5 }}</td>
-            </tr>
-            
-            {% endfor %}
-        </tr>
-        {% set media_geral = (total|sum|float) / 4 %}
+                <td class="tri">{{ x.1 }}</td>
+                {% if x.3 < (x.5 / 2) %} 
+                    <td style="color: red;">
+                        {{ x.3 }}
+                    </td>
+                    {% set total = total.append(x.3|float) %}
+                {% elif x.3 > (x.5 / 2) and x.3 < (x.5 / 1.2) %}
+                    <td style="color: orange;">
+                        {{ x.3 }}
+                    </td>
+                    {% set total = total.append(x.3|float) %}
+                {% else %}
+                    <td style="color: teal;">
+                        {{ x.3 }}
+                    </td>
+                    {% set total = total.append(x.3|float) %}
+                {% endif%}
+                    <td>
+                        {{ x.5 }}
+                    </td>
+                </tr>
+            {% endfor %}</tr>
+        {% set media_geral = (total|sum|float) %}
         <th colspan="2">Pontos totais</th>
         <th colspan="2">Média geral </th>
-        <tr>
-            <td colspan="2"> {{ total|sum }} </td>
-            {% if media_geral < 5 %}
-                <td style="color: red;" colspan="2"> {{ "%.2f" % media_geral }} <br> 
-                    Reprovando
+            <tr>
+                <td id="total" colspan="2"> 
+                    {{ total|sum }} 
                 </td>
-
-            {% else %}
-                <td style="color: teal;" colspan="2"> {{ "%.2f" % media_geral }} <br> 
-                    Aprovando
-                </td>
-            {% endif %}
-        </tr>
+                <td  id="media" style="color: teal;" colspan="2"> {{ "%.2f" % media_geral }}</td>
+            </tr>
         </table>
     </div>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

@@ -16,6 +16,9 @@ body {
     padding-bottom: 3%;
     padding-top: 3%;
 }
+a:visited{
+    background-color: orange;
+}
 
 .buscar {
     background-color: #54004C;

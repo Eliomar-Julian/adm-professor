@@ -39,10 +39,10 @@
     text-align: center;
 }
 .images {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background: teal;
+    background: rgba(0, 128, 128, 0.496);
     display: inline-block;
     margin: 2%;
 }

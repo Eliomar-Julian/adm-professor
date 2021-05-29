@@ -11,62 +11,37 @@
                     {% if x[2] %}
                     <div class="img-conteiner">
                         <img class="img" src="{{ url_for('static', filename='img/uploads/' + x[2]) }}" 
-                        alt="" class="foto-p">
+                                alt="" class="foto-p">
                     </div>
                     {% endif %}
-                    <h3 class="nome-pessoa">
-                        {{ x[4]|title }}
-                    </h3>
-                    <p>
-                        Turno: {{ x[0]|upper }}
-                    </p>
-                    <p>
-                        Turma: {{ x[1]|upper }}
-                    </p>
-                    <p>
-                        Disciplina: {{ x[3]|upper }}
-                    </p>
+                    <h3 class="nome-pessoa">{{ x[4]|title }}</h3>
+                    <p>Turno: {{ x[0]|upper }}</p>
+                    <p>Turma: {{ x[1]|upper }}</p>
+                    <p>Disciplina: {{ x[3]|upper }}</p>
                 </a>
             </div>
         {% endfor %}
     {% else %}
-        <h1 style="color: white; text-align: center;">
-            Sem alunos cadastrados
-        </h1>
+        <h1 style="color: white; text-align: center;">Sem alunos cadastrados</h1>
     {% endif %}
     </div>
     <div class="atalhos">
         <div class="buscar">
             <form action="" method="POST">
                 <input type="search" name="busca" id="busca">
-                <input type="submit" value="Organize" id="submit">
-                <br>
-                <h3 class="nome-pessoa" style="background-color: transparent;">
-                    Organizar buscas por
-                </h3>
+                <input type="submit" value="Organize" id="submit"><br>
+                <h3 class="nome-pessoa" style="background-color: transparent;">Organizar buscas por</h3>
                 <div class="inputs">
-                    Disciplina
-                    <input type="radio" name="radio" value="disciplina">
-                    Turma
-                    <input type="radio" name="radio" value="turma">
-                    Turno
-                    <input type="radio" name="radio" value="turno">
-                    Nome
-                    <input type="radio" name="radio" checked="checked" value="nome">
+                    Disciplina <input type="radio" name="radio" value="disciplina">
+                    Turma <input type="radio" name="radio" value="turma">
+                    Turno <input type="radio" name="radio" value="turno">
+                    Nome <input type="radio" name="radio" checked="checked" value="nome">
                 </div>
             </form>
         </div>
         <h3 style="margin: 10px;background-color: #ab4b3f;" class="nome-pessoa">Atallhos rápidos</h3>
             <table class="tabela-atalhos">
-                <th>
-                    Turma
-                </th>
-                <th>
-                    Turno
-                </th>
-                <th>
-                    Disci
-                </th>
+                <th> Turma</th><th> Turno</th><th>Disci</th>
                 {% set turma = [] %}
                 {% set turno = [] %}
                 {% set disci = [] %}
@@ -91,17 +66,11 @@
     </div>
     <div class="explica">
         <p class="texto">
-            <strong>
-                &nbsp;&nbsp;&nbsp;&nbsp;Veja nesta página a lista de alunos cadastrados
-            </strong>
+            <strong>&nbsp;&nbsp;&nbsp;&nbsp;Veja nesta página a lista de alunos cadastrados</strong>
             clique em cada perfil para ver mais detalhes e acrescentar notas e atividades
-            realizadas pelo aluno. 
-            <br>
+            realizadas pelo aluno. <br>
             &nbsp;&nbsp;&nbsp;&nbsp;Organize por turma, disciplina ou turno clicando em um dos 
-            <i style="color: orange;">
-                links
-            </i>
-            acima.
+            <i style="color: orange;">links</i>acima.
         </p>
     </div>
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>

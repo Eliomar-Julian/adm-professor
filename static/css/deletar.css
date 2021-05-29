@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
 }
 .listar {
-    width: 40%;
+    width: 30%;
     margin: auto auto auto 20%;
     height: auto;
     overflow-y: none;
@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     background-color: transparent;
-    margin-left: 20%;
+    margin-left: 8%;
     margin-top: -3%;
     padding: 2%;
     padding-bottom: 1%;
@@ -29,7 +29,7 @@ body {
     margin: 1%;
     background: teal;
     padding: 0px;
-    color: white;
+    color: rgb(193, 178, 178);
     font-weight: bold;
     font-family: Arial, sans-serif;
     list-style: none;
@@ -37,7 +37,7 @@ body {
 }
 #mensagem-delete {
     display: none;
-    color: rgb(233, 223, 223);
+    color: rgb(241, 233, 233);
     background-color: #54004C;
     width: 20vw;
     position: fixed;
@@ -87,14 +87,14 @@ h3 {
     font-size: 14pt;
     margin: auto;
     padding: 0px;
-    color: white;
+    color: rgb(230, 219, 219);
     text-align: center;
     font-family: Arial, sans-serif;
 }
 h1 {
     margin: 5% 0px;
     padding: 0px;
-    color: white;
+    color: rgb(196, 186, 186);
     text-align: center;
     font-family: Arial, sans-serif;
 }
@@ -131,10 +131,10 @@ button {
   }
 
 .botoes{
-    border: 1px solid white;
+    border: 1px solid rgb(236, 225, 225);
     padding: 2%;
     margin: auto;
-    color: white;
+    color: rgb(231, 200, 200);
     background-color: #282A36;
     width: max-content;
     height: 1%;

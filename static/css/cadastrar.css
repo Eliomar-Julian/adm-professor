@@ -1,34 +1,43 @@
 @charset "utf-8";
 #cadastrar {
-    width: 45vw;
-    margin: 2% auto;
+    width: 35vw;
+    margin:auto;
     background-color: teal;
     padding: 10px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
     color: rgb(211, 15, 15);
-    font-size: 14pt;
+    font-size: 12pt;
     font-family: Arial, sans-serif;
     font-weight: bold;
     border-right: 1px solid white;
 }
 .mensagem-erro {
-    color: red;
+    color: rgba(255, 0, 0, 0.558);
     font-family: Arial, sans-serif;
     margin: 0px;
     text-align: center;
     display: none;
 }
-input[type=text] {
+input {
     width: 90%;
-    margin: 10px;
+    margin: 3px;
     height: 25pt;
+    background-color: #282A35;
+    color: white;
+    font-size: 12pt;
+   
 }
-input[type=number] {
-    width: 90%;
-    margin: 10px;
-    height: 25pt;
+
+input:focus{
+    background-color: white;
+    color: teal;
+    outline-color: orange;
+    outline-style: solid;
+    outline-width: 1px;
 }
+
+
 fieldset {
     width: 90%;
     margin-left: 2%;
@@ -43,17 +52,14 @@ input[type=file] {
     height: 25pt;
     padding: 10px;
     margin-top: 10pt;
+    background-color: transparent;
 }
 input[type=radio] {
     margin-left: 1%;
+    width: 3%;
     
 }
-input {
-    height: 25pt;
-}
-input[type=button] {
-    margin-top: 10pt;
-}
+
 select {
     height: 25pt;
     margin-top: 10pt;
@@ -64,6 +70,7 @@ label {
 }
 h1 {
     text-align: center;
+    font-size: 14pt;
 }
 .lateral {
     width: 20vw;

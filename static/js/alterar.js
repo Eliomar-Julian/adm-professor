@@ -12,7 +12,7 @@ function mudar(botao) {
 
 function voltar(){
     // volta a pagina de deleção...
-    window.history.back();
+    document.location.replace('/deletar');
 }
 
 function confirmar(botao) {

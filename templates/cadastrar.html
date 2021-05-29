@@ -7,79 +7,43 @@
             Cadastrar aluno
         </h1>
         <form action="" id="formulario" method="POST" enctype="multipart/form-data">
-            Nome*:  
-            <input type="text" class="inputs" name="nome">
-            <br>
-            <p class="mensagem-erro">
-                *É preciso escrever um nome! 
-            </p>
-            Turma*: 
-            <input type="text" class="inputs" name="turma">
-            <br>
-            <p class="mensagem-erro"> 
-                *É preciso escrever uma turma! 
-            </p>
-            RG: 
-            <br>
-            <input type="number" class="inputs" name="rg">
-            <br>
-            <p class="mensagem-erro"> 
-                *Escreva apenas numeros! 
-            </p>
-            CPF: 
-            <br>
-            <input type="number" class="inputs" name="cpf">
-            <br>
-            <p class="mensagem-erro"> 
-                *É preciso escrever uma turma! 
-            </p>
+            <input type="text" placeholder="Nome*" class="inputs" name="nome"><br>
+            <p class="mensagem-erro"> *É preciso escrever um nome! </p>
+            <input type="text" class="inputs" name="turma" placeholder="Turma"><br>
+            <p class="mensagem-erro"> *É preciso escrever uma turma! </p><br>
+            <input type="number" class="inputs" placeholder="RG" name="rg"><br>
+            <p class="mensagem-erro"> *Escreva apenas numeros! </p><br>
+            <input type="number" class="inputs" placeholder="CPF" name="cpf"><br>
+            <p class="mensagem-erro"> *É preciso escrever uma turma! </p>
             <fieldset>
-                <legend>
-                    Turno
-                </legend>
-                    <label for="matutino">
-                        Manhã
-                    </label> 
+                <legend>Turno</legend>
+                    <label for="matutino">Manhã</label> 
                     <input id="matutino" name="radio" checked="checked" 
-                    type="radio" class="inputs" value="matutino">
-                    <label for="vespertino">
-                        Tarde
-                    </label> 
+                            type="radio" class="inputs" value="matutino">
+                    <label for="vespertino">Tarde</label> 
                     <input id="vespertino" name="radio" type="radio" 
-                    class="inputs" value="vespertino">
-                    <label for="noturno">
-                        Noite
-                    </label> 
+                            class="inputs" value="vespertino">
+                    <label for="noturno">Noite</label> 
                     <input id="noturno" name="radio" type="radio" 
-                    class="inputs" value="noturno">
+                            class="inputs" value="noturno">
             </fieldset>
             <fieldset>
-                <legend>
-                    Sexo
-                </legend>
-                    <label for="masculino">
-                        Masculino
-                    </label> 
+                <legend>Sexo</legend>
+                    <label for="masculino">Masculino</label> 
                     <input id="masculino" checked="checked" name="radio-sexo" type="radio" 
-                    class="inputs" value="masculino">
-                    <label for="feminino">
-                        Feminino
-                    </label> 
+                            class="inputs" value="masculino">
+                    <label for="feminino">Feminino</label> 
                     <input id="feminino" name="radio-sexo" type="radio" class="inputs" value="feminino">
-                    <label for="outro">
-                        Outro
-                    </label> 
+                    <label for="outro">Outro</label> 
                     <input id="outro" name="radio-sexo" type="radio" class="inputs" value="outro">
             </fieldset>
             <select name="select">
-                {% for dis in var.disciplinas %}
-                    <option value="{{ dis }}">{{ dis }}</option>
-                {% endfor %}
+                {% for dis in var.disciplinas %}<option value="{{ dis }}">{{ dis }}</option>{% endfor %}
             </select>
             Foto: 
             <input placeholder="teste" title="" type="file" class="inputs" name="foto">
             <input id="submeter" type="button" onclick="validar()" value="cadastrar">
-            <input type="button" value="cancelar" onclick="location.href = '/'">
+            <input type="reset" value="cancelar">
         </form>
     </div>
     <div class="lateral">

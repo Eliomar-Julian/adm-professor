@@ -7,15 +7,11 @@
     <form method="get" id="form">
         <ul>
             <select name="selecao" class="selecao">
-                <option value="">
-                    Todos
-                </option>
+                <option value="">Todos</option>
                 {% set nao = [] %}
                 {% for tupla in var %}
                     {% if tupla[1] not in nao %}
-                        <option value="{{ tupla.1 }}">
-                            {{ tupla[1]|upper }}
-                        </option>
+                        <option value="{{ tupla.1 }}">{{ tupla[1]|upper }}</option>
                     {% endif %}
                     {% set nao = nao.append(tupla[1]) %}
                 {% endfor %}
@@ -25,28 +21,27 @@
             <input type="button" class="botoes" onclick="window.history.back(true)" value="voltar &#x1F519;">
             <input style="background-color: red;" type="button" 
             class="botoes" name="todos" onclick="checar()" value="Deletar selecionados">
-            <i style="font-size: 16pt;color: green;">
-                &#9745;
-            </i>
+            <i style="font-size: 16pt;color: green;">&#9745;</i>
             
             {% for tupla in var|sort %}
                 <div >
                     <li class="lis">
-                        <h3 style="background-color: #374747; padding: 1%; width: 80%; border-radius: 10px; text-align: center;">
+                        <h3 style="background-color: #374747; padding: 1%; width: 80%; 
+                                border-radius: 10px; text-align: center;">
                             {{ tupla.4|title }}
                         </h3>
-                        <h3 style="color: red; font-size: 12pt;">
-                            {{ tupla.0|upper }}
-                        </h3>
+                        <h3 style="color: red; font-size: 12pt;">{{ tupla.0|upper }}</h3>
                         <h3 style="color: red; font-size: 12pt; margin-bottom: 2%;">
                             {{ tupla.1|upper }}
                         </h3>
                         
                         <div class="btns">
-                            <button class="botoes" type="button" name="deletar" value="{{ tupla.4 }}" onclick="abrirMsg(this)">
+                            <button class="botoes" type="button" name="deletar" value="{{ tupla.4 }}" 
+                                    onclick="abrirMsg(this)">
                                 Deletar &#128465; 
                             </button>
-                            <button class="botoes" type="button" name="alterar" value="{{ tupla.4 }}" onclick="mudar(this)">
+                            <button class="botoes" type="button" name="alterar" value="{{ tupla.4 }}" 
+                                    onclick="mudar(this)">
                                 Alterar &#x1F5D2;
                             </button>
                             <input type="checkbox" name="checado" value="{{ tupla.4 }}"> Marque para excluir
@@ -60,18 +55,11 @@
     </form>
 </div>
 <div id="mensagem-delete">
-    <h3 class="subtitulo">Deletar<div class="x" onclick="fecharX()">
-        x
-    </div>
-    </h3>
+    <h3 class="subtitulo">Deletar<div class="x" onclick="fecharX()">x</div></h3>
     <p class="pergunta"> </p>
     <div class="botoes">
-        <button onclick="deletarSim()">
-            Sim
-        </button>
-        <button onclick="deletarNao()">
-            Não
-        </button>
+        <button onclick="deletarSim()">Sim</button>
+        <button onclick="deletarNao()">Não</button>
     </div>
 </div>
 <div class="lateral">

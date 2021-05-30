@@ -6,7 +6,7 @@
     <div class="principal-perfis">
     {% if var %}
         {% for x in var %}
-            <div class="div-lista">
+            <div class="div-lista" title="Ver perfil: {{ x.4|title }}">
                 <a href="/perfil/{{ x[4] }}">
                     {% if x[2] %}
                     <div class="img-conteiner">

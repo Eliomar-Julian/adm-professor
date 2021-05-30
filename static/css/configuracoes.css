@@ -70,15 +70,7 @@ input {
 #mais {
     padding: 5%;
 }
-#temas {
-    width: 25vw;
-    height: 30vh;
-    position: absolute;
-    background-color: teal;
-    left: 47%;
-    top: 35%;
-    border-radius: 5px;    
-}
+
 h1 {
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -86,30 +78,50 @@ h1 {
     text-align: center;
     margin: auto;
 }
-.fundo {
-    background-color: white;
-    width: 80%;
-    margin: auto;
-}
-.menu {
-    background-color: purple;
-    width: max-content;
-    padding: 1%;
-    color: white;
-    height: 100%;
-}
-.texto {
-    position: absolute;
-    width: 50%;
-    top: 13%;
-    left: 34%;
-}
-label{
-    margin: auto;
-    color: white;
-}
+
 #tema {
     background-color: rgba(12, 11, 11, 0.476);
     display: flex;
     align-items: center;
 }
+
+
+/*--- esquema de cores  */
+
+#temas {
+    width: 25vw;
+    height: 45vh;
+    position: absolute;
+    background-color: teal;
+    left: 47%;
+    top: 35%;
+    border-radius: 5px;    
+}
+#padrao {
+    background-image: linear-gradient(
+        to right, rgb(220, 214, 214) 10%, #5A004A 60%, #282A35 80%);
+    padding: 1pt;
+    border-radius: 5px;
+}
+#gruvbox {
+    background-image: linear-gradient(
+        to right, rgb(220, 214, 214) 10%, #ED4933 60%, #1D2021 80%);
+    padding: 1pt;
+    border-radius: 5px;
+    margin-top: 1pt;
+}
+#dracula {
+    background-image: linear-gradient(
+        to right, rgb(220, 214, 214) 10%, #BD93F9 60%, #282A36 80%);
+    padding: 1pt;
+    border-radius: 5px;
+    margin-top: 1pt;
+}
+#monokai {
+    background-image: linear-gradient(
+        to right, rgb(220, 214, 214) 10%, #44B7EF 60%, #272822 80%);
+    padding: 1pt;
+    border-radius: 5px;
+    margin-top: 1pt;
+}
+

@@ -20,14 +20,12 @@ Um programa de gestão escolar voltado ao professor, rode localmente e facilite 
     ou se preferir, acesse os links [Flask](https://pypi.org/project/Flask/) e [Mysql connector](https://pypi.org/project/mysql-connector-python/).
 
 ### Configurando:
-Após instalar e configurar o servidor mysql, crie um database chamado __escola__.
-Abra o arquivo __configurar.ini__ e insira as configurações de seu servidor.
+Após instalar e configurar o servidor mysql abra o arquivo __configurar.ini__ e insira as configurações de seu servidor.
  ```ini
 [BASE]
 server = localhost
 password = sua-senha
-database = escola
-user = root
+user = seu-usuário
  ```
 Tudo pronto agora rode o servidor `server.bat` para Windows ou  `server.sh` para Linux.
  

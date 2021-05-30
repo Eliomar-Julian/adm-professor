@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="erro">
+        <p class="mensagem">
+            <strong>{{ var.frase }}</strong><br>
+            Não há nenhum aluno cadastrado, por favor vá a <a href="/cadastrar">pagina de cadastro</a>
+            e insira perfis de alunos à base de dados, porém antes cadastre as disciplinas  
+            na <a href="/mais">página de configurações</a>.
+        </p>
+    </div>
+    <style>
+        .erro {
+            width: 40vw;
+            height: auto;
+            background: teal;
+            margin: auto;
+            padding: 1%;
+        }
+        strong {
+            color: red;
+            font-size: 15pt;
+            font-family: arial, sans-serif;
+        }
+        .mensagem {
+            color: rgb(202, 199, 199);
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: blue;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+    </style>
+{% endblock %}

@@ -56,7 +56,11 @@ def funcao_perfil_listar():
             return render_template('listar-nome.html', var=materias)
     
     except mysql.connector.ProgrammingError:
-        return "erro de programação"
+        return render_template(
+            'erros/generico.html', var={
+                'frase': 'Erro ao listar'
+            }
+        )
 
 
 # // mostra o perfil de cada aluno .. 
@@ -143,25 +147,32 @@ def funcao_cadastro():
 
 
 def funcao_deletar():
-    if request.method == 'POST':
-        try:
+    try:
+        if request.method == 'POST':
             try:
-                org = request.form['checado']
-                for nomes in org.split(','):
-                    Delete().deletar(nomes.strip())
-            except:
-                org = request.form['deletar']
-                Delete().deletar(org)
-            tudo = Listin().buscar_dinamicamente(org, 'escola_alunos_turma')
-            return render_template('deletar.html', var=tudo)
-        
-        except exceptions.BadRequestKeyError:
-            org = request.form['selecao']
-            tudo = Listin().buscar_dinamicamente(org, 'escola_alunos_turma')
-            return render_template('deletar.html', var=tudo)
+                try:
+                    org = request.form['checado']
+                    for nomes in org.split(','):
+                        Delete().deletar(nomes.strip())
+                except:
+                    org = request.form['deletar']
+                    Delete().deletar(org)
+                tudo = Listin().buscar_dinamicamente(org, 'escola_alunos_turma')
+                return render_template('deletar.html', var=tudo)
             
-    tudo = Listin().listar_perfis_tudo()
-    return render_template('deletar.html', var=tudo)
+            except exceptions.BadRequestKeyError:
+                org = request.form['selecao']
+                tudo = Listin().buscar_dinamicamente(org, 'escola_alunos_turma')
+                return render_template('deletar.html', var=tudo)
+                
+        tudo = Listin().listar_perfis_tudo()
+        return render_template('deletar.html', var=tudo)
+    except Exception:
+        return render_template(
+            'erros/generico.html', var={
+                'frase': 'Erro ao listar para remoção e alteração'
+                }
+            )
 
 
 # // altera dados...
@@ -184,7 +195,7 @@ def funcao_alterar(nome):
             var = Update().select_from(nome)
             return render_template('alterar.html', var=var)
     except Exception:
-        return render_template('erro_alterar.html')
+        return render_template('erros/alterar.html')
 
 
 # // renderiza  a tela de configurações extras...

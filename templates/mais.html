@@ -45,25 +45,16 @@
 </div>
 
 <div id="temas">
-    <h1>Configure um tema</h1>
-    <div class="fundo">
-        <div class="menu">
-            <ul>menu
-                <li>sdfsda</li><li>sdfsda</li><li>sdfsda </li>
-            </ul>
-        </div>
-        <p class="texto"> 
-            Lorem ipsum dolor sit amet, consectetur adipisicing 
-            elit. Et ea repellendus eveniet 
-            necessitatibus ullam placea.
-        </p>
-    </div>
-    <form action="" method="get" id="tema">
-        <label for="">cor de fundo<input type="color" name="fundo" id="fundo"></label>
-        <label for="">cor de frente<input type="color" name="frente" id="frente"></label>
-        <label for="">cor do menu<input type="color" name="menu" id="menu_"></label>
-
-    </form>
+    <fieldset>
+        <form action="" method="get">
+            <legend style="color: red;">Selecione um esquema de cores</legend>
+            <div id="padrao"><p>Padrão&nbsp;&nbsp;&nbsp;<input type="radio" name="cor" value="padrao" checked="checked"></p></div>
+            <div id="gruvbox"><p>Gruvbox<input type="radio" name="cor" value="gruvbox"></p></div>
+            <div id="dracula"><p>Dracula &nbsp;<input type="radio" name="cor" value="dracula"></p></div>
+            <div id="monokai"><p>Monokai<input type="radio" name="cor" value="monokai"></p></div>
+            <button type="button">Mudar</button>
+        </form>
+    </fieldset>
 </div>
 
 <script src="{{ url_for('static', filename='js/configuracoes.js') }}"></script>

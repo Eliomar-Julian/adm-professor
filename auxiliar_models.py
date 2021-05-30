@@ -20,8 +20,17 @@ def conectar() -> mysql.connector.connect:
     conn = mysql.connector.connect(
         host=CONFIG['server'],
         user=CONFIG['user'],
+        password=CONFIG['password']
+    )
+    cursor = conn.cursor()
+    cursor.execute('CREATE DATABASE IF NOT EXISTS escola;')
+    conn.commit()
+    conn.close()
+    conn = mysql.connector.connect(
+        host=CONFIG['server'],
+        user=CONFIG['user'],
         password=CONFIG['password'],
-        database=CONFIG['database']
+        database='escola'
     )
     return conn
 

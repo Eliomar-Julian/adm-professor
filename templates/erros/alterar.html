@@ -2,20 +2,18 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/alterar.css') }}">
     <div class="msg">
-        <h1>
-            Desculpe nada a alterar, você precisa gerar dados no perfil selecionado!
-        </h1>
+        <p>Desculpe nada a alterar, você precisa gerar dados no perfil selecionado!</p>
         <button onclick="redirecionar()">Gerar dados no perfil</button>
         <button onclick="document.location.href = '/deletar'">Voltar</button>
     </div>
     <style>
         .msg{
-            width: 60vw;
+            width: 40vw;
             margin: auto;
             background-color: teal;
             color: red;
             padding: 2%;
-            font-size: 15pt;
+            font-size: 12pt;
             font-family: Arial, sans-serif;
             text-align: center;
             font-weight: bold;

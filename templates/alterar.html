@@ -16,13 +16,19 @@
                 <th>Nota</th>
                 <th>valor</th>
                 <input type="hidden" name="retorno" value="">
+                <datalist id="lis">
+                    <option value="1º Trimestre">
+                    <option value="2º Trimestre">
+                    <option value="3º Trimestre">
+                    <option value="4º Trimestre">
+                </datalist>
                 {% for x in var %}
                     <tr>
                         <td>
                             <input type="text" disabled name="id" value="{{ x.0 }}">
                         </td>
                         <td>
-                            <input name="tri" type="text" value="{{ x.1 }}">
+                            <input name="tri" type="text" list="lis" value="{{ x.1 }}">
                         </td>
                         <td>
                             <input name="ati" type="text" value="{{ x.4 }}" maxlength="10">

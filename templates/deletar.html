@@ -3,6 +3,7 @@
 {% block content %}
 <body ondblclick="autoOrganizar()">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/deletar.css') }}">
+{% if var %}
 <div class="listar">
     <form method="get" id="form">
         <ul>
@@ -54,6 +55,9 @@
         </ul>
     </form>
 </div>
+{% else %}
+    <h3>Sem perfis cadastrados...</h3>
+{% endif %}
 <div id="mensagem-delete">
     <h3 class="subtitulo">Deletar<div class="x" onclick="fecharX()">x</div></h3>
     <p class="pergunta"> </p>

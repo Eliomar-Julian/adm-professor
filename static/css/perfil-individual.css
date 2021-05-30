@@ -59,7 +59,7 @@ td {
     padding: 1%;
     text-align: center;
 }
-h1 {
+.h1 {
     font-size: 15pt;
     color: rgb(230, 214, 214);
     font-family: Arial, sans-serif;
@@ -132,11 +132,11 @@ select {
     background-color: #54004C;
     position: fixed;
     width: 20vw;
-    height: auto;
+    height: 90vh;
     top: 1vh;
     left: 58vw;
     border-radius: 10px;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     padding: 1%;
 }

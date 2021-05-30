@@ -90,6 +90,9 @@ def funcao_perfil_unico(nome):
         dados_perfil = dados[1]
         var['cadastro'] = dados_cadastrais
         var['perfil'] = dados_perfil
+        var['notificacao'] = '''<p style="color: yellow; background: red; padding: 1%;">
+            Dados inseridos, <strong>NÃO </strong>faça reload! clique em &lt;Atualizar 
+            tabela&gt; para limpar o cache do formulario.</p>'''
         return render_template('perfil-individual.html', var=var)
     return render_template('perfil-individual.html', var=var)
 

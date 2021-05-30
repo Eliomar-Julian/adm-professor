@@ -1,4 +1,4 @@
-// calcula a media no front end da pagina de perfil individual...
+// calcula a media no front end da pagina de perfil individual..............
 
 function calculaMedia(){
   let tds = document.getElementsByTagName("td");
@@ -23,9 +23,10 @@ function calculaMedia(){
     notaElemento.innerHTML = `${media.toFixed(1)} <br> <strong>Reprovando!</strong>`;
     notaElemento.setAttribute("style", "color: red");
   }
+  rolarParaFormulario();
 }
 
-// gera o PDF da funcao de perfil individual...
+// gera o PDF da funcao de perfil individual....................................
 
 function printData() {
     let divToPrint = document.getElementById("tabela");
@@ -34,7 +35,7 @@ function printData() {
     let th = document.getElementsByTagName("th");
     let td = document.getElementsByTagName("td");
     let nomee = document.getElementsByTagName("h1")[1];
-    newWin = window.open("");
+    let newWin = window.open("");
     for (var i = 0; i < th.length; i++) {
       th[i].style = `padding: 1%; color: red; margin: 1%; border: 1px solid black; 
                       font-size: 15pt; font-family: Arial, sans-serif; margin: 1%;`
@@ -51,12 +52,11 @@ function printData() {
     newWin.document.write("MÉDIA:&nbsp;&nbsp;&nbsp;" + media.outerHTML);
     newWin.print();
     newWin.close();
-    //window.location.reload();
     atualizar();
   }
 
 
-// faz reload da pagna sem fazer post no banco de dados ..
+// faz reload da pagna sem fazer post no banco de dados ..............................
 
 function atualizar() {
   let nome = document.getElementsByTagName("h1")[1];
@@ -75,7 +75,7 @@ function filtrar(radioButton, filtro) {
   botao.click();
 }
 
-// validando form de cadastros de alunos ...
+// validando form de cadastros de alunos ...................................
 
 function validar() {
   let inputs = document.querySelectorAll(".inputs");
@@ -111,3 +111,34 @@ function validar() {
 function back(){
   window.history.back();
 }
+
+// interaçoes da tela de cadastro......................------------------//
+
+let notificacao = document.querySelectorAll(".h1");
+let formulario = document.getElementById("formulario-perfil");
+let filhos = formulario.childNodes;
+let alerta = document.createElement("h3");
+let botaoNotas = document.getElementById("insereNotas");
+formulario.addEventListener("click", mudanca);
+alerta.innerText = `* Os campos de notas não podem ficar vazios *`;
+alerta.style = `color: red;`;
+
+function mudanca(){
+  notificacao[2].innerHTML = `Clique em <strong style="color: red; background: orange;">
+      Atualizar tabela</strong> caso queira limpar os campos.`;
+  notificacao[2].style = "font-size: 12pt; color: orange; background-color: red; padding: 1%;"
+}
+function checarNotas(){
+  if (!filhos[8].value || !filhos[12].value){
+    formulario.insertBefore(alerta, filhos[14]);
+    return;
+  }
+  alerta.remove();
+  botaoNotas.setAttribute("type", "submit");
+}
+
+function rolarParaFormulario(){
+  formulario.scrollIntoView(false);
+}
+
+//----------------------------------------------------------------------------------//

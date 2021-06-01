@@ -1,19 +1,19 @@
 @charset "utf-8";
 #cadastrar {
-    width: 35vw;
+    width: 50vw;
     margin:auto;
-    background-color: teal;
+    background-color:#A6341B;
     padding: 10px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
-    color: rgb(211, 15, 15);
+    color: #D1BF91;
     font-size: 12pt;
+    height: 80vh;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    border-right: 1px solid white;
 }
 .mensagem-erro {
-    color: rgba(255, 0, 0, 0.558);
+    color: #F9C743;
     font-family: Arial, sans-serif;
     margin: 0px;
     text-align: center;
@@ -23,18 +23,18 @@ input {
     width: 90%;
     margin: 3px;
     height: 25pt;
-    background-color: #282A35;
-    color: white;
+    background-color: #C7C8C4;
+    color: black;
     font-size: 12pt;
+    outline: none;
+    border-radius: 5px;
+    border: none;
    
 }
 
 input:focus{
-    background-color: white;
-    color: teal;
-    outline-color: orange;
-    outline-style: solid;
-    outline-width: 1px;
+    background-color: #D1BF91;
+    color: black;
 }
 
 
@@ -44,8 +44,10 @@ fieldset {
     display: flex;
     align-items: center;
     border-collapse: collapse;
-    background-color: #54004C;
-    color: white;
+    background-color: #A6341B;
+    color: #D1BF91;
+    outline: #A6341B;
+    border: none;
 }
 input[type=file] {
     width: max-content;
@@ -71,17 +73,18 @@ label {
 .h1 {
     text-align: center;
     font-size: 14pt;
+    color: #D1BF91;
 }
 .lateral {
     width: 20vw;
-    height: auto;
-    background-color: #54004C;
-    color: rgb(198, 190, 190);
+    height: 90vh;
+    text-align: justify;
+    background-color: #60371E;
+    color: #D1BF91;
     font-family: Arial, sans-serif;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.523);
     position: absolute;
-    top: 10%;
-    left: 75%;
+    top: 1%;
+    left: 77%;
     border-radius: 5px;
     padding: 1%;
 }

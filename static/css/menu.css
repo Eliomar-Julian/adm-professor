@@ -2,13 +2,13 @@ body {
     margin: 0px;
     height: 0px;
     width: 100vw;
-    background-color: #282A36;
+    background-color: #C7C8C4;
 }
 #menu {
     position: fixed;
-    width: 20vw;
+    width: 15vw;
     height: 100vh;
-    background-color: rgb(78, 6, 78);
+    background-color: #60371E;
     margin-top: -4%;
     padding-top: 6%;
     padding-bottom: 2%;
@@ -30,14 +30,14 @@ input[type=submit] {
 }
 .links-menu {
     text-decoration: none;
-    color: rgb(194, 185, 185);
+    color: #F9C743;
     margin: auto;   
 }
 .itens-menu {
     list-style: none;
     margin: 10px;
     font-family: arial, sans-serif;
-    font-size: 15pt;
+    font-size: 11pt;
     font-weight: bold;
     border-radius: 5px;
     word-wrap: break-word;   
@@ -51,4 +51,11 @@ li {
     margin: 2%;
     transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
 }
+hr {
+    background: linear-gradient(to right, #D1BF91, #60371E, #A6341B, #F9C743, #C7C8C4);
+    height: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+
 

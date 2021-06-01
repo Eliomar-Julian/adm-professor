@@ -27,8 +27,8 @@
             {% for tupla in var|sort %}
                 <div >
                     <li class="lis">
-                        <h3 style="background-color: #374747; padding: 1%; width: 80%; 
-                                border-radius: 10px; text-align: center;">
+                        <h3 style="color: #60371E; padding: 1%; width: 80%; 
+                                border-radius: 10px; text-align: center">
                             {{ tupla.4|title }}
                         </h3>
                         <h3 style="color: red; font-size: 12pt;">{{ tupla.0|upper }}</h3>
@@ -48,7 +48,7 @@
                             <input type="checkbox" name="checado" value="{{ tupla.4 }}"> Marque para excluir
                         </div>
                     </li>
-                </div>
+                </div> <hr>
             {% endfor %}
         
         

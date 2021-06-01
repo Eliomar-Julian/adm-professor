@@ -1,13 +1,8 @@
-body {
-    overflow-y: hidden;
-    margin: 0px;
-    height: 0px;
-    width: 100vw;
-}
+
 .principal-perfis {
     width: 50vw;
     height: 90vh;
-    background-color: #282A36;
+    background-color: #C7C8C4;
     margin: -2% auto auto 20%;
     border-radius: 10px;
     padding-top: 2%;
@@ -16,12 +11,9 @@ body {
     padding-bottom: 3%;
     padding-top: 3%;
 }
-a:visited{
-    background-color: orange;
-}
 
 .buscar {
-    background-color: #54004C;
+    background-color: #A6341B;
     width: 90%;
     height:auto;
     padding: 14pt;
@@ -52,25 +44,25 @@ input[type=submit] {
     margin: 10px auto;
 }
 .div-lista {
-    background-color: teal;
+    background-color: #C7C8C4;
     width: 80%;
     margin: 1% auto 1% auto;
     border-radius: 5px;
     height: max-content;
 }
 .nome-pessoa {
-    color: white;
+    color: #60371E;
     margin: auto 5%;
     text-align: center;
     font-weight: bold;
     font-size: 12pt;
     font-family: Arial, sans-serif;
     padding: 1%;
-    background-color: rgba(117, 12, 12, 0.489);
+    background-color: #D1BF91;
     border-radius: 10px;
 }
 p {
-    color: red;
+    color:#A6341B;
     font-size: 10pt;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -85,7 +77,7 @@ a {
     text-decoration: none;
 }
 .inputs {
-    background-color: rgba(0, 128, 0, 0.578);
+    background-color: #A6341B;
     width: 90%;
     margin: auto;
     padding: 5px;
@@ -116,7 +108,7 @@ a {
     background: rgba(117, 12, 12, 0.489);
   }
   .atalhos {
-      background-color: #54004C;
+      background-color: #A6341B;
       width: 25vw;
       height: 60vh;
       position: relative;
@@ -125,7 +117,6 @@ a {
       margin-right: 3%;
       overflow-y: auto;
       border-radius: 5px;
-      box-shadow: 1px 1px 10px #de8971b3;
   }
 table {
     width: 100%;
@@ -142,13 +133,13 @@ td {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid rgba(255, 0, 0, 0.421);
+    border: 1px solid #A6341B;
     color: #a7d0cd;
     font-size: 12pt;
     font-family: Arial, sans-serif;
 }
 .explica {
-    background-color: #54004C;
+    background-color: #A6341B;
     width: 25vw;
     left: 73%;
     margin-top: 1%;
@@ -164,4 +155,3 @@ td {
     padding: 10px;
     width: 95%;
 }
-

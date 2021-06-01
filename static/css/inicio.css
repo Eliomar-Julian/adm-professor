@@ -6,30 +6,24 @@
     align-items: center;
 }
 .bem-vindo {
-    color: rgb(235, 225, 225);
+    color: #A6341B;
     text-align: center;
     font-size: 25pt;
     font-family: Arial, sans-serif;
 }
 .artigo {
-    background-color: #54004C;
+    background-color: #A6341B;
     padding: 10px;
     word-wrap: break-word;
     border-radius: 10px;
+    height: 50vh;
 }
 .paragrafo {
-    font-family: Verdana, sans-serif;
-    font-size: 14pt;
-    color: rgb(230, 211, 211);
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #D1BF91;
     text-indent: 15pt;
     padding: 10px;
-}
-.seta {
-    color: white;
-    text-align: center;
-    font-size: 50pt;
-    font-weight: bold;
-    max-height: 20px;
 }
 .div-images {
     width: 100%;
@@ -42,7 +36,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(0, 128, 128, 0.496);
+    background: transparent;
     display: inline-block;
     margin: 2%;
 }
@@ -50,23 +44,27 @@
     background-image: url("../img/icons/add_grupo.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80px;
+    background-size: 40px;
+    filter: invert(100%);
 }
 #ame {
     background-image: url("../img/icons/gerenciamento.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80px;
+    background-size: 40px;
+    filter: invert(100%);
 }
 #despertador {
     background-image: url("../img/icons/procurar_pessoas.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80px;
+    background-size: 40px;
+    filter: invert(100%);
 }
 #estatisticas {
     background-image: url("../img/icons/cara.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80px;
+    background-size: 40px;
+    filter: invert(100%);
 }

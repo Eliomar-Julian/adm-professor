@@ -1,35 +1,43 @@
 body {
     overflow-x: hidden;
 }
+input {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
 .listar {
-    width: 30%;
+    width: 50%;
     margin: auto auto auto 20%;
     height: auto;
     overflow-y: none;
     padding-bottom: 5%;
     overflow-y: auto;
-    border-right: 1px solid white;
+    border-right: 1px solid #D1BF91;
     padding-right: 10%;
 }
+.lis:hover{
+    background-color: transparent;
+}
 .btns{
-    width: 22vw;
+    width: 23vw;
     display: flex;
     align-items: center;
     background-color: transparent;
     margin-left: 8%;
     margin-top: -3%;
-    padding: 2%;
+    padding: 1%;
     padding-bottom: 1%;
     position: relative;
-    background-color: #3447477b;
+    background-color: transparent;
 }
 .lis {
     text-align: left;
     max-height: 15vh;
     margin: 1%;
-    background: teal;
+    background: #C7C8C4;
     padding: 0px;
-    color: rgb(193, 178, 178);
+    color: #000;
     font-weight: bold;
     font-family: Arial, sans-serif;
     list-style: none;
@@ -38,7 +46,7 @@ body {
 #mensagem-delete {
     display: none;
     color: rgb(241, 233, 233);
-    background-color: #54004C;
+    background-color:#A6341B;
     width: 20vw;
     position: fixed;
     height: 20vh;
@@ -50,7 +58,7 @@ body {
 .subtitulo {
     text-align: center;
     width: 100%;
-    color: red;
+    color: #D1BF91;
     margin-top: 0px;
     padding: 1%;
     background-color: transparent;
@@ -80,11 +88,11 @@ p {
     padding: 1%;
     margin-left: 60%;
     margin-top: 20%;
-    background-color: #54004C;
+    background-color: #A6341B;
     border: none;
 }
 h3 {
-    font-size: 14pt;
+    font-size: 12pt;
     margin: auto;
     padding: 0px;
     color: rgb(230, 219, 219);
@@ -101,6 +109,7 @@ h1 {
 button {
     cursor: pointer;
     color: black;
+    border-radius: 5px;
 }
 .selecao {
     width: 10vw;
@@ -108,7 +117,7 @@ button {
     border: none;
     font-weight: 300;
     font-family: Arial, sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -135,21 +144,20 @@ button {
     padding: 2%;
     margin: auto;
     color: rgb(231, 200, 200);
-    background-color: #282A36;
+    background-color: #A6341B;
     width: max-content;
     height: 1%;
 }
 .lateral {
-    width: 20vw;
-    height: auto;
-    background-color: #54004C;
+    width: 15vw;
+    height: 80vh;
+    background-color: #A6341B;
     position: absolute;
     top: 5%;
     right: 5%;
     padding: 2%;
-    text-align: left;
+    text-align: justify;
     border-radius: 5px;
-    color: rgb(184, 173, 173);
+    color: #D1BF91;
     font-family: Arial, sans-serif;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.374);
 }

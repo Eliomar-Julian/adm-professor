@@ -138,9 +138,28 @@ def funcao_cadastro():
                 )
             return render_template('perfil.html', var=dicio)
     except mysql.connector.errors.IntegrityError:
-        return 'valores duplicados'
+        return render_template(
+            'erros/generico.html', var={
+                'frase': 'Aluno já cadastrado por favor mude o nome do aluno.',
+                'explicito': 'aluno já existe...'
+                }
+            )
     except mysql.connector.errors.ProgrammingError:
-        return 'erro de consulta'
+        return render_template(
+            'erros/generico.html', var={
+                'frase': """Desculpe um erro interno aconteceu, 
+                acesse: <a href="https://www.github.com/Eliomar-Julian/adm-professor">
+                Github</a> para ver uma possivel solução"""
+            }
+        )
+    except mysql.connector.errors.DataError as erro:
+        return render_template(
+            'erros/generico.html', var={
+                'frase': 'Campo muito longo, por favor diminua o numero de caracteres!',
+                'explicito': str(erro)
+            }
+        )
+
     with open('static/conf/config.json', 'r') as conf:
         dicio = json.loads(conf.read())
     return render_template('cadastrar.html', var=dicio)

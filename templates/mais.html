@@ -18,21 +18,6 @@
     </fieldset>
 </div>
 
-<div class="principal-2">
-
-    <fieldset class="senha-nome">
-        <legend style="color: red;" title="Defina as sua disciplinas lecionadas">Definir uma senha</legend>
-        <form title="Defina as sua disciplinas lecionadas" action="" method="POST" id="form-2">
-            <label for="nome">Usuário</label>
-            <input type="text" name="nome-senha"> <br>
-            <label for="nome"> Senha&nbsp;&nbsp;</label>
-            <input type="text" name="nome-senha" class=""><br>
-            <label for="nome">Repita&nbsp;&nbsp;</label>
-            <input type="text" name="nome-senha" class=""><br>
-            <button title="Definir" type="button" id="">Pronto!</button>
-        </form>
-    </fieldset>
-</div>
 <div class="principal" id="explica">
     <p>
         &nbsp;&nbsp;&nbsp;&nbsp; Configure suas disciplinas, defina senha, defina
@@ -42,19 +27,6 @@
         nessa tela. <br>
         &nbsp;&nbsp;&nbsp;&nbsp;Ao definir uma senha anote em um local seguro.
     </p>
-</div>
-
-<div id="temas">
-    <fieldset>
-        <form action="" method="get">
-            <legend style="color: red;">Selecione um esquema de cores</legend>
-            <div id="padrao"><p>Padrão&nbsp;&nbsp;&nbsp;<input type="radio" name="cor" value="padrao" checked="checked"></p></div>
-            <div id="gruvbox"><p>Gruvbox<input type="radio" name="cor" value="gruvbox"></p></div>
-            <div id="dracula"><p>Dracula &nbsp;<input type="radio" name="cor" value="dracula"></p></div>
-            <div id="monokai"><p>Monokai<input type="radio" name="cor" value="monokai"></p></div>
-            <button type="button">Mudar</button>
-        </form>
-    </fieldset>
 </div>
 
 <script src="{{ url_for('static', filename='js/configuracoes.js') }}"></script>

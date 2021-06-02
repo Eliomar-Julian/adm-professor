@@ -1,3 +1,5 @@
+window.onload = mudando;
+
 function mudando(){
     // muda a legenda da tabela para o nome do aluno selecionado
     let legenda = document.querySelectorAll("legend");

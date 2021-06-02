@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<body>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/listar-perfis.css') }}">
     <div class="principal-perfis">
     {% if var %}
@@ -74,5 +72,4 @@
         </p>
     </div>
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>
-</body>
 {% endblock %}

@@ -1,10 +1,7 @@
-body {
+
+body{
     overflow-x: hidden;
-}
-input {
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    overflow-y: scroll;
 }
 .listar {
     width: 50%;
@@ -13,7 +10,6 @@ input {
     overflow-y: none;
     padding-bottom: 5%;
     overflow-y: auto;
-    border-right: 1px solid #D1BF91;
     padding-right: 10%;
 }
 .lis:hover{
@@ -99,7 +95,7 @@ h3 {
     text-align: center;
     font-family: Arial, sans-serif;
 }
-h1 {
+.h1 {
     margin: 5% 0px;
     padding: 0px;
     color: rgb(196, 186, 186);
@@ -151,8 +147,8 @@ button {
 .lateral {
     width: 15vw;
     height: 80vh;
-    background-color: #A6341B;
-    position: absolute;
+    background-color: #60371E;
+    position: fixed;
     top: 5%;
     right: 5%;
     padding: 2%;

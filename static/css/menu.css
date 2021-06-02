@@ -1,9 +1,27 @@
-body {
-    margin: 0px;
-    height: 0px;
-    width: 100vw;
-    background-color: #C7C8C4;
+/* Color Theme Swatches in Hex */
+.Feng-Shui-Soft-Fire-II-1-hex { color: #D1BF91; }
+.Feng-Shui-Soft-Fire-II-2-hex { color: #60371E; }
+.Feng-Shui-Soft-Fire-II-3-hex { color: #A6341B; }
+.Feng-Shui-Soft-Fire-II-4-hex { color: #F9C743; }
+.Feng-Shui-Soft-Fire-II-5-hex { color: #C7C8C4; }
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 85%;
+    min-height: 100%;
 }
+#video{
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.205);
+  color: #f1f1f1;
+  width: 80%;
+  padding: 20px;
+  left: 15%;
+  margin: auto;
+}
+
 #menu {
     position: fixed;
     width: 15vw;
@@ -13,7 +31,12 @@ body {
     padding-top: 6%;
     padding-bottom: 2%;
 }
-
+body {
+    margin: 0px;
+    height: 0px;
+    width: 100vw;
+    background-color: #C7C8C4;
+}
 #lista {
     display: block;
     margin: auto;
@@ -53,9 +76,11 @@ li {
 }
 hr {
     background: linear-gradient(to right, #D1BF91, #60371E, #A6341B, #F9C743, #C7C8C4);
-    height: 5px;
+    height: 3px;
     border: none;
     border-radius: 3px;
   }
+
+ 
 
 

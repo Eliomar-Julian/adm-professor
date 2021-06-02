@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<body onload="calculaMedia()">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil-individual.css') }}">
     <div class="corpo-perfil">
         <div class="img">
@@ -11,13 +9,6 @@
             {% endif %}
             <h1 class="h1" value="{{ var.cadastro[4] }}" id="pessoa">{{ var.cadastro[4] }}</h1>
         </div>
-        <table class="tabela-perfil-individual" id="tabela-1">
-            {% for x in var.cabecalhos %}<th>{{ x }}</th>{% endfor %}<tr>
-            {% for x in var.cadastro %}
-                {% if x != var.cadastro[2]  and x != var.cadastro[4]%}<td class="infos">{{ x }}</td>{% endif %}
-            {% endfor %}
-            </tr>
-        </table>
     </div>
     <div class="info">
         <p>
@@ -32,14 +23,6 @@
         </p>
     </div>
     <div class="tabela2">
-        <table id="tabela">
-            <th>id</th><th>Periodo</th><th>nota</th><th>atividade</th><th>objetivo</th>
-        <tr>
-            {% for x in var.perfil %}<tr>
-                    {% for y in x %}{% if y != x[2] %}<td>{{ y }}</td>{% endif %}{% endfor %}</tr>
-            {% endfor %}
-        </tr>
-        </table>
         <div class="div-btn" id="div-btn">
             <button class="botao" onclick="printData()">imprimir</button>
             <button style="background-color: rgb(216, 185, 11); color: red;" class="botao" title="clique para atualizar a tabela" 
@@ -118,5 +101,4 @@
         </table>
     </div>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
 {% endblock %}

@@ -3,9 +3,13 @@
     <div class="erro">
         <p class="mensagem">
             <strong>{{ var.frase }}</strong><br>
-            Não há nenhum aluno cadastrado, por favor vá a <a href="/cadastrar">pagina de cadastro</a>
-            e insira perfis de alunos à base de dados, porém antes cadastre as disciplinas  
-            na <a href="/mais">página de configurações</a>.
+            {% if var.explicito %}
+                {{ var.explicito }}            
+            {% else %}
+                Não há nenhum aluno cadastrado, por favor vá a <a href="/cadastrar">pagina de cadastro</a>
+                e insira perfis de alunos à base de dados, porém antes cadastre as disciplinas  
+                na <a href="/mais">página de configurações</a>.
+            {% endif %}
         </p>
     </div>
     <style>

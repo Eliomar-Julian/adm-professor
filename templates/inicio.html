@@ -1,27 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-<body>
+    <div id="video">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='video/letras.mp4') }}" type="video/mp4">
+        </video>
+    </div>
     
     <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
     <div class="corpo">
-        <h3 class="bem-vindo">Bem vindo ao programa de gestão escolar</h3>
+        
         <div class="explicacao">
             <article class="artigo">
+                <h3 class="bem-vindo">Bem vindo ao programa de gestão escolar</h3>
                 <p class="paragrafo">
                     Este é um programa escolar de gestão de alunos voltado ao professor
                     para que o mesmo consiga gerenciar as notas e atividades de seus alunos
                     de maneira rápida e prática sem usar um monte de papéis desnecessários. <br>
                     ADICIONE, ALTERE, IMPRIMA, ORGANIZE, sem preocupação ou dor de cabeça. <br>
-                    Para acessar as diferentes áreas do programa navegue pelo menu lateral à esquerda.
+                    Para acessar as diferentes áreas do programa navegue pelo menu lateral à esquerda. <br>
+                    Deixe que o computador trabelhe para você nessa árdua tarefa de passar conhecimentos. <br>
+                    <span>Se mantenha atualizado, faça sempre um <strong><i>git pull</i></strong> para manter
+                    seu repositório atualizado.</span>
                 </p>
+                <div class="div-images">
+                    <a href="/cadastrar"><div id="aluna" class="images"></div></a>
+                    <a href="/deletar"><div id="ame" class="images"></div></a>
+                    <a href="/perfil"><div id="despertador" class="images"></div></a>
+                    <a href="/mais"><div id="estatisticas" class="images"></div></a>
+                </div>
             </article>
         </div>
-        <div class="div-images">
-            <a href="/cadastrar"><div id="aluna" class="images"></div></a>
-            <a href="/deletar"><div id="ame" class="images"></div></a>
-            <a href="/perfil"><div id="despertador" class="images"></div></a>
-            <a href="/mais"><div id="estatisticas" class="images"></div></a>
-        </div>
     </div>
-</body>
 {% endblock %}

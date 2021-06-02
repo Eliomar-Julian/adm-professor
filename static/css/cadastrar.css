@@ -1,8 +1,13 @@
 @charset "utf-8";
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 #cadastrar {
-    width: 50vw;
+    order: 0;
+    width: 45vw;
     margin:auto;
-    background-color:#A6341B;
+    background-color: #C7C8C4;
     padding: 10px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
@@ -13,7 +18,7 @@
     font-weight: bold;
 }
 .mensagem-erro {
-    color: #F9C743;
+    color: #60371E;
     font-family: Arial, sans-serif;
     margin: 0px;
     text-align: center;
@@ -23,18 +28,19 @@ input {
     width: 90%;
     margin: 3px;
     height: 25pt;
-    background-color: #C7C8C4;
+    border: 1px solid #F9C743;
     color: black;
     font-size: 12pt;
     outline: none;
     border-radius: 5px;
     border: none;
+    padding: 2%;
    
 }
 
 input:focus{
-    background-color: #D1BF91;
-    color: black;
+    background-color: #f5f3ef;
+    color: #60371E;
 }
 
 
@@ -44,7 +50,7 @@ fieldset {
     display: flex;
     align-items: center;
     border-collapse: collapse;
-    background-color: #A6341B;
+    background-color: #C7C8C4;
     color: #D1BF91;
     outline: #A6341B;
     border: none;
@@ -52,7 +58,9 @@ fieldset {
 input[type=file] {
     width: max-content;
     height: 25pt;
-    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 1%;
     margin-top: 10pt;
     background-color: transparent;
 }
@@ -61,19 +69,35 @@ input[type=radio] {
     width: 3%;
     
 }
-
+input[type=button] {
+    background-color: #A6341B;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #D1BF91;
+    padding: 2%;
+}
+input[type=reset]{
+    background-color: #A6341B;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #D1BF91;
+    padding: 2%;
+}
 select {
     height: 25pt;
     margin-top: 10pt;
+    border-radius: 5px;
+    border: none;
 }
 label {
     margin-left: 15%;
     word-wrap: break-word;
+    color: #A6341B;
 }
 .h1 {
     text-align: center;
     font-size: 14pt;
-    color: #D1BF91;
+    color: #A6341B;
 }
 .lateral {
     width: 20vw;
@@ -82,9 +106,31 @@ label {
     background-color: #60371E;
     color: #D1BF91;
     font-family: Arial, sans-serif;
-    position: absolute;
+    position: fixed;
     top: 1%;
     left: 77%;
     border-radius: 5px;
     padding: 1%;
 }
+legend{
+    color: #A6341B;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #7b6079;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #de8971;
+    border-radius: 2px;    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(117, 12, 12, 0.489);
+  }

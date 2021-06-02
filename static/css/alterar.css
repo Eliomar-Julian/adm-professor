@@ -1,14 +1,13 @@
 .corpo {
-    width: 50vw;
+    width: 40vw;
     height: auto;
-    background-color:#A6341B;
+    background-color:transparent;
     margin: auto;
-    padding: 10px;
-    border-right: 1px solid white;
+    padding: 1%;
 }
 .tabela {
     margin: auto;
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     background-color: transparent;
 }
@@ -17,7 +16,7 @@ legend {
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    color: #F9C743;
+    color: #A6341B;
     margin: 1%;
 }
 h3 {
@@ -29,7 +28,7 @@ h3 {
 }
 button {
     color: white;
-    background-color: #60371E;
+    background-color: #A6341B;
     padding: 1%;
     font-family: Arial, sans-serif;
     margin: 1%;
@@ -40,22 +39,22 @@ button {
     border: none;
 }
 td {
-    font-size: 12pt;
+    font-size: 10pt;
     margin: 1%;
     padding: 1%;
     
 }
 input[type=text] {
-    font-size: 11pt;
+    font-size: 10pt;
     color: black;
     font-family: Arial, sans-serif;
     width: 100%;
     margin: 1%;
-    padding: 1%;
+    padding: 2%;
 }
 
 input[type=number] {
-    font-size: 11pt;
+    font-size: 10pt;
     color: black;
     font-family: Arial, sans-serif;
     width: 100%;
@@ -71,14 +70,15 @@ th {
 .explica {
     width: 15vw;
     position: absolute;
-    background-color: #A6341B;
+    background-color: #60371E;
     left: 77%;
     top: 1%;
+    padding: 1%;
     height: 80vh;
 }
 .explica p {
     font-size: 12pt;
-    color: rgb(206, 194, 194);
+    color: #D1BF91;
     font-family: Arial, sans-serif;
     font-weight: 200;
     text-align: left;

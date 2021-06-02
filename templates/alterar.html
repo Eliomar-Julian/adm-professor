@@ -4,7 +4,6 @@
 {% block content %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/alterar.css') }}">
-<body onload="mudando()">
 <div class="corpo">
     <form action="" method="POST">
         {% if var %}
@@ -81,5 +80,4 @@
     </p>
 </div>
 <script src="{{ url_for('static', filename='js/alterar.js') }}"></script>
-</body>
 {% endblock %}

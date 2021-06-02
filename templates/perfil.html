@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
-<body>
-    
+<link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">    
     <div class="corpo-principal">
         <div class="fotografia">
             {% if var.foto %}
@@ -36,5 +34,4 @@
             
         </div>
     </div>
-</body>
 {% endblock %}

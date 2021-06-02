@@ -1,6 +1,6 @@
 
 .principal-perfis {
-    width: 50vw;
+    width: 40vw;
     height: 90vh;
     background-color: #C7C8C4;
     margin: -2% auto auto 20%;
@@ -13,7 +13,7 @@
 }
 
 .buscar {
-    background-color: #A6341B;
+    background-color: transparent;
     width: 90%;
     height:auto;
     padding: 14pt;
@@ -49,6 +49,7 @@ input[type=submit] {
     margin: 1% auto 1% auto;
     border-radius: 5px;
     height: max-content;
+    transition: ease-out 0.5s;
 }
 .nome-pessoa {
     color: #60371E;
@@ -60,13 +61,13 @@ input[type=submit] {
     padding: 1%;
     background-color: #D1BF91;
     border-radius: 10px;
+    animation: infinite;
 }
 p {
     color:#A6341B;
     font-size: 10pt;
     font-family: Arial, sans-serif;
     text-align: center;
-    font-weight: bold;
     margin: 0px;
     margin: auto;
     padding: 5px;
@@ -75,6 +76,11 @@ p {
 }
 a {
     text-decoration: none;
+    color: #A6341B;
+}
+.div-lista:hover{ 
+    background-color: #d1bf917c;
+    transition: ease-out 0.5s;
 }
 .inputs {
     background-color: #A6341B;
@@ -108,14 +114,15 @@ a {
     background: rgba(117, 12, 12, 0.489);
   }
   .atalhos {
-      background-color: #A6341B;
+      background-color: transparent;
       width: 25vw;
-      height: 60vh;
-      position: relative;
-      right: -73vw;
-      margin-top: -90vh;
-      margin-right: 3%;
+      border: 1px solid #60371E;
+      height: auto;
+      position: absolute;
+      left: 70%;
+      top: 1%;
       overflow-y: auto;
+      overflow-x: hidden;
       border-radius: 5px;
   }
 table {
@@ -134,24 +141,23 @@ td {
     border-radius: 5px;
     cursor: pointer;
     border: 1px solid #A6341B;
-    color: #a7d0cd;
+    color: #A6341B;
     font-size: 12pt;
     font-family: Arial, sans-serif;
 }
 .explica {
-    background-color: #A6341B;
-    width: 25vw;
+    background-color: #60371E;
+    width: 24vw;
     left: 73%;
-    margin-top: 1%;
-    position: absolute;
+    bottom: 20vh;
+    position: relative;
     border-radius: 5px;
 }
 .explica p.texto {
-    font-size: 12pt;
-    font-weight: bold;
+    font-size: 10pt;
     color: wheat;
     font-family: Arial, sans-serif;
-    text-align: left;
+    text-align: justify;
     padding: 10px;
     width: 95%;
 }

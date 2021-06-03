@@ -3,6 +3,21 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
 }
+#borrar {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #c7c8c475;
+    z-index: -1;
+    background-image: url("../img/icons/balde.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /*filter: blur(8px);*/
+}
 .listar {
     width: 50%;
     margin: auto auto auto 20%;
@@ -13,7 +28,8 @@ body{
     padding-right: 10%;
 }
 .lis:hover{
-    background-color: transparent;
+    background-color: #D1BF91;
+    cursor: text;
 }
 .btns{
     width: 23vw;
@@ -58,7 +74,6 @@ body{
     margin-top: 0px;
     padding: 1%;
     background-color: transparent;
-    font-weight: bold;
     font-family: Arial, sans-serif;
 }
 .x {
@@ -88,7 +103,7 @@ p {
     border: none;
 }
 h3 {
-    font-size: 12pt;
+    font-size: 10pt;
     margin: auto;
     padding: 0px;
     color: rgb(230, 219, 219);
@@ -136,12 +151,13 @@ button {
   }
 
 .botoes{
-    border: 1px solid rgb(236, 225, 225);
-    padding: 2%;
+    padding: 1%;
+    border: none;
     margin: auto;
-    color: rgb(231, 200, 200);
     background-color: #A6341B;
     width: max-content;
+    border-radius: 5px;
+    color: #F9C743;
     height: 1%;
 }
 .lateral {

@@ -2,7 +2,9 @@
 {% block content %}
 
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/cadastrar.css') }}">    
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cadastrar.css') }}">
+<body>
+    
     <div class="div" id="cadastrar">
         <h1 class="h1">
             Cadastrar aluno
@@ -67,8 +69,8 @@
             fator físico visivelmente aparente.
         </p>
     </div>
-    
+    <div id="borrar"></div>    
     <script src="{{ url_for('static', filename='js/main.js') }}">
     </script>
-    
+</body>
 {% endblock %}

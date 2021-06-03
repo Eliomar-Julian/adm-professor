@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="erro">
+        <h3 class="h3">{{ var.frase }}</h3>
         <p class="mensagem">
-            <strong>{{ var.frase }}</strong><br>
+            
             {% if var.explicito %}
-                {{ var.explicito }}            
+                {{ var.explicito|safe }}            
             {% else %}
                 Não há nenhum aluno cadastrado, por favor vá a <a href="/cadastrar">pagina de cadastro</a>
                 e insira perfis de alunos à base de dados, porém antes cadastre as disciplinas  
@@ -13,24 +14,35 @@
         </p>
     </div>
     <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
         .erro {
             width: 40vw;
             height: auto;
-            background: teal;
+            background: #A6341B;
+            padding: 2%;
+            height: auto;
             margin: auto;
-            padding: 1%;
+            position: relative;
+            border-radius: 5px;
         }
-        strong {
-            color: red;
+        .h3 {
+            color: #F9C743;
             font-size: 15pt;
             font-family: arial, sans-serif;
+            text-align: center;
+
         }
         .mensagem {
-            color: rgb(202, 199, 199);
+            color: #D1BF91;
             font-family: Arial, sans-serif;
         }
         a {
-            color: blue;
+            color: #C7C8C4;
             font-weight: bold;
             text-decoration: none;
             font-size: 12pt;

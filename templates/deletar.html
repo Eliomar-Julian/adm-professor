@@ -20,7 +20,7 @@
             </select>
             <input type="button" class="botoes" onclick="organizar(this)" value="Organizar &#9782;">
             <input type="button" class="botoes" onclick="window.history.back(true)" value="voltar &#x1F519;">
-            <input style="background-color: red;" type="button" 
+            <input style="background-color: #A6341B;" type="button" 
             class="botoes" name="todos" onclick="checar()" value="Deletar selecionados">
             <i style="font-size: 16pt;color: green;">&#9745;</i>
             
@@ -31,8 +31,8 @@
                                 border-radius: 10px; text-align: center; background-color: #D1BF91;">
                             {{ tupla.4|title }}
                         </h3>
-                        <h3 style="color: red; font-size: 12pt;">{{ tupla.0|upper }}</h3>
-                        <h3 style="color: red; font-size: 12pt; margin-bottom: 2%;">
+                        <h3 style="color: #A6341B; font-size: 8pt;">{{ tupla.0|upper }}</h3>
+                        <h3 style="color: #A6341B; font-size: 8pt; margin-bottom: 2%;">
                             {{ tupla.1|upper }}
                         </h3>
                         
@@ -45,7 +45,7 @@
                                     onclick="mudar(this)">
                                 Alterar &#x1F5D2;
                             </button>
-                            <input type="checkbox" name="checado" value="{{ tupla.4 }}"> Marque para excluir
+                            <input type="checkbox" name="checado" value="{{ tupla.4 }}"> <h3 style="color: #60371E;">Marque para excluir</h3>
                         </div>
                     </li>
                 </div> <hr>
@@ -56,7 +56,15 @@
     </form>
 </div>
 {% else %}
-    <h3>Sem perfis cadastrados...</h3>
+    <h3 style="color: red; font-family: 
+        Arial, sans-serif; font-size: 15pt; bottom: 60%; 
+        position: absolute; left: 40%;">
+        Deletado...
+    </h3><br>
+    <a style="color: #F9C743; background-color: #A6341B; padding: 1%; 
+        border-radius: 5px; cursor: pointer; position: absolute; left: 41%; bottom: 52%; text-decoration: none;" 
+        href="/deletar">Voltar
+    </a>
 {% endif %}
 <div id="mensagem-delete">
     <h3 class="subtitulo">Deletar<div class="x" onclick="fecharX()">x</div></h3>
@@ -67,10 +75,10 @@
     </div>
 </div>
 <div class="lateral">
-    <h3>Dê um duplo clique em qualquer área antes da linha vertical branca 
+    <h3 style="text-align: justify;">Dê um duplo clique em qualquer área antes da linha vertical branca 
         para reorganizar por turma selecionada
     </h3>
-    <p>
+    <p style="text-align: justify;">
         Organize seus alunos por turma, altere os dados das atividades recentes
         e delete perfis únicos ou vários de uma única vez. <br>
         Cuidado ao marcar vários perfis para a remoção, após clicar em "deletar selecionados"
@@ -81,5 +89,6 @@
 </div>
 <script src="{{ url_for('static', filename='js/deletar.js') }}"></script>
 <script src="{{ url_for('static', filename='js/alterar.js') }}"></script>
+<div id="borrar"></div>
 </body>
 {% endblock %}

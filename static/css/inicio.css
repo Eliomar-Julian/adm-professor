@@ -1,9 +1,16 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .corpo {
-    width: 50%;
+    width: 50vw;
+    height: 50vh;
     margin: auto;
     position: relative;
-    display: flexbox;
-    align-items: center;
+    margin: auto;
 }
 .bem-vindo {
     color: #F9C743;
@@ -17,6 +24,7 @@
     word-wrap: break-word;
     border-radius: 10px;
     height: 50vh;
+    margin: auto;
 }
 .paragrafo {
     font-family: Arial, sans-serif;

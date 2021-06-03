@@ -7,16 +7,33 @@
         <button onclick="document.location.href = '/deletar'">Voltar</button>
     </div>
     <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
         .msg{
             width: 40vw;
             margin: auto;
-            background-color: teal;
-            color: red;
+            background-color: #A6341B;
+            color: #F9C743;
             padding: 2%;
-            font-size: 12pt;
+            font-size: 10pt;
             font-family: Arial, sans-serif;
             text-align: center;
             font-weight: bold;
+        }
+        button{
+            background-color: #A6341B;
+            color: #F9C743;
+            font-family: Arial, sans-serif;
+            border: 1px solid black;
+            border-radius: 5px;
+            transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
+        }
+        button:hover {
+            background-color: #60371E;
         }
     </style>
 <script>

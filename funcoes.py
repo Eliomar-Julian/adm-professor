@@ -25,7 +25,16 @@ def funcao_perfil_listar():
     try:
         if request.method == 'GET':
             perfis = Listin().listar_perfis_tudo()
-            return render_template('listar-nome.html', var=perfis)
+            if perfis:
+                return render_template('listar-nome.html', var=perfis)
+            else: 
+                return render_template(
+                'erros/generico.html', var={
+                    'frase': 'Sem alunos cadastrados', 
+                    'explicito': '''Para listar alunos é necessário 
+                        <a href="/cadastrar">cadastrar <a>perfis.'''
+                    }
+                )
         
         elif request.method == 'POST' and request.form['radio'] == 'nome':
             buscas = request.form['busca']
@@ -90,7 +99,8 @@ def funcao_perfil_unico(nome):
         dados_perfil = dados[1]
         var['cadastro'] = dados_cadastrais
         var['perfil'] = dados_perfil
-        var['notificacao'] = '''<p style="color: yellow; background: red; padding: 1%;">
+        var['notificacao'] = '''<p style="color: #F9C743; 
+            background: #A6341B; padding: 1%; border-radius: 5px;">
             Dados inseridos, <strong>NÃO </strong>faça reload! clique em &lt;Atualizar 
             tabela&gt; para limpar o cache do formulario.</p>'''
         return render_template('perfil-individual.html', var=var)
@@ -188,7 +198,16 @@ def funcao_deletar():
                 return render_template('deletar.html', var=tudo)
                 
         tudo = Listin().listar_perfis_tudo()
-        return render_template('deletar.html', var=tudo)
+        if tudo:
+            return render_template('deletar.html', var=tudo)
+        else:
+            return render_template(
+                'erros/generico.html', var={
+                    'frase': 'Sem alunos cadastrados', 
+                    'explicito': '''Para listar alunos é necessário 
+                        <a href="/cadastrar">cadastrar <a>perfis.'''
+                    }
+                )
     except Exception:
         return render_template(
             'erros/generico.html', var={

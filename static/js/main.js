@@ -118,12 +118,12 @@ let alerta = document.createElement("h3");
 let botaoNotas = document.getElementById("insereNotas");
 formulario.addEventListener("click", mudanca);
 alerta.innerText = `* Os campos de notas não podem ficar vazios *`;
-alerta.style = `color: #F9C743;`;
+alerta.style = `color: #A6341B;`;
 
 function mudanca(){
-  notificacao[2].innerHTML = `Clique em <strong style="color: red; background: white;">
+  notificacao[2].innerHTML = `Clique em <strong style="color: #A6341B; background: #F9C743; padding: 1%;border-radius: 5px;">
       Atualizar tabela</strong> caso queira limpar os campos.`;
-  notificacao[2].style = "font-size: 10pt; color: #F9C743; background-color: #60371E; padding: 1%;"
+  notificacao[2].style = "font-size: 10pt; color: #F9C743; background-color: #60371E; padding: 1%; border-radius: 5px;"
 }
 function checarNotas(){
   console.log(filhos);

@@ -148,5 +148,5 @@ legend{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    /*filter: blur(3px);*/
+    filter: blur(5px);
 }

@@ -16,7 +16,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    /*filter: blur(8px);*/
+    filter: blur(8px);
 }
 .listar {
     width: 50%;

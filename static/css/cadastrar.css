@@ -135,18 +135,3 @@ legend{
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(117, 12, 12, 0.489);
   }
-  #borrar {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: #c7c8c475;
-    z-index: -1;
-    background-image: url("../img/icons/home.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-}

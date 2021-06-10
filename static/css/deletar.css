@@ -3,21 +3,6 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
 }
-#borrar {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: #c7c8c475;
-    z-index: -1;
-    background-image: url("../img/icons/balde.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px);
-}
 .listar {
     width: 50%;
     margin: auto auto auto 20%;

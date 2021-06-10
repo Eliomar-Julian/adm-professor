@@ -76,32 +76,32 @@
     </div>
     <div class="div-infos">
         <table id="infos">
-            <th>atividade</th><th>Periodo</th><th>Nota</th><th>Valor</th>
+            <th hidden>atividade</th><th hidden>Periodo</th><th colspan="2">Nota</th><th>Valor</th>
         <tr>
             {% set total = [] %}
             {% for x in var.perfil %}
             <tr>
-                <td style="word-wrap: break-word;">
+                <td hidden style="word-wrap: break-word;">
                     {{ x.4 }}
                 </td>
-                <td class="tri">{{ x.1 }}</td>
+                <td hidden class="tri">{{ x.1 }}</td>
                 {% if x.3 < (x.5 / 2) %} 
-                    <td style="color: red;">
+                    <td colspan="2" style="color: red;">
                         {{ x.3 }}
                     </td>
                     {% set total = total.append(x.3|float) %}
                 {% elif x.3 > (x.5 / 2) and x.3 < (x.5 / 1.2) %}
-                    <td style="color: orange;">
+                    <td colspan="2" style="color: orange;">
                         {{ x.3 }}
                     </td>
                     {% set total = total.append(x.3|float) %}
                 {% else %}
-                    <td style="color: teal;">
+                    <td colspan="2" style="color: teal;">
                         {{ x.3 }}
                     </td>
                     {% set total = total.append(x.3|float) %}
                 {% endif%}
-                    <td>
+                    <td colspan="2">
                         {{ x.5 }}
                     </td>
                 </tr>

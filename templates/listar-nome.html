@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<body>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/listar-perfis.css') }}">
     <div class="principal-perfis">
     {% if var %}
@@ -19,7 +17,7 @@
                     <p>Turma: {{ x[1]|upper }}</p>
                     <p>Disciplina: {{ x[3]|upper }}</p>
                 </a>
-            </div>
+            </div> <hr>
         {% endfor %}
     {% else %}
         <h3 style="color: white; text-align: center;">Sem perfis cadastrados</h3>
@@ -30,7 +28,8 @@
             <form action="" method="POST">
                 <input type="search" name="busca" id="busca">
                 <input type="submit" value="Organize" id="submit"><br>
-                <h3 class="nome-pessoa" style="background-color: transparent;">Organizar buscas por</h3>
+                <h3 class="nome-pessoa" style="background-color: #A6341B; color: #F9C743; 
+                    margin-top: 1%; padding: 0px 0px 5px 5px; border-radius: 5px 5px 0px 0px;">Organizar buscas por</h3>
                 <div class="inputs">
                     Disciplina <input type="radio" name="radio" value="disciplina">
                     Turma <input type="radio" name="radio" value="turma">
@@ -73,6 +72,6 @@
             <i style="color: orange;">links</i>acima.
         </p>
     </div>
+    <div id="borrar"></div>
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>
-</body>
 {% endblock %}

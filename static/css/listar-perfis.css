@@ -1,13 +1,23 @@
-body {
-    overflow-y: hidden;
-    margin: 0px;
-    height: 0px;
+#borrar {
     width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #c7c8c475;
+    z-index: -1;
+    background-image: url("../img/icons/check.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
 }
+
 .principal-perfis {
-    width: 50vw;
+    width: 40vw;
     height: 90vh;
-    background-color: #282A36;
+    background-color: transparent;
     margin: -2% auto auto 20%;
     border-radius: 10px;
     padding-top: 2%;
@@ -16,12 +26,9 @@ body {
     padding-bottom: 3%;
     padding-top: 3%;
 }
-a:visited{
-    background-color: orange;
-}
 
 .buscar {
-    background-color: #54004C;
+    background-color: transparent;
     width: 90%;
     height:auto;
     padding: 14pt;
@@ -29,13 +36,18 @@ a:visited{
 }
 input[type=search] {
     width: 75%;
-    padding: 5px;
+    padding: 3%;
     margin: auto;
     border-radius: 5px;
     border: none;
 }
 input[type=submit] {
     width: max-content;
+    background-color: #A6341B;
+    color: #F9C743;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
 }
 .img-conteiner {
     background-color: transparent;
@@ -52,29 +64,30 @@ input[type=submit] {
     margin: 10px auto;
 }
 .div-lista {
-    background-color: teal;
+    background-color: #C7C8C4;
     width: 80%;
     margin: 1% auto 1% auto;
     border-radius: 5px;
     height: max-content;
+    transition: ease-out 0.5s;
 }
 .nome-pessoa {
-    color: white;
+    color: #60371E;
     margin: auto 5%;
     text-align: center;
     font-weight: bold;
     font-size: 12pt;
     font-family: Arial, sans-serif;
     padding: 1%;
-    background-color: rgba(117, 12, 12, 0.489);
+    background-color: #D1BF91;
     border-radius: 10px;
+    animation: infinite;
 }
 p {
-    color: red;
+    color:#A6341B;
     font-size: 10pt;
     font-family: Arial, sans-serif;
     text-align: center;
-    font-weight: bold;
     margin: 0px;
     margin: auto;
     padding: 5px;
@@ -83,9 +96,14 @@ p {
 }
 a {
     text-decoration: none;
+    color: #A6341B;
+}
+.div-lista:hover{ 
+    background-color: #D1BF91;
+    transition: ease-out 0.5s;
 }
 .inputs {
-    background-color: rgba(0, 128, 0, 0.578);
+    background-color: #A6341B;
     width: 90%;
     margin: auto;
     padding: 5px;
@@ -116,16 +134,16 @@ a {
     background: rgba(117, 12, 12, 0.489);
   }
   .atalhos {
-      background-color: #54004C;
+      background-color: transparent;
       width: 25vw;
-      height: 60vh;
-      position: relative;
-      right: -73vw;
-      margin-top: -90vh;
-      margin-right: 3%;
+      border: 1px solid #60371E;
+      height: auto;
+      position: absolute;
+      left: 70%;
+      top: 1%;
       overflow-y: auto;
+      overflow-x: hidden;
       border-radius: 5px;
-      box-shadow: 1px 1px 10px #de8971b3;
   }
 table {
     width: 100%;
@@ -142,26 +160,28 @@ td {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid rgba(255, 0, 0, 0.421);
-    color: #a7d0cd;
+    border: 1px solid #A6341B;
+    color: #A6341B;
     font-size: 12pt;
     font-family: Arial, sans-serif;
 }
+td:hover{
+    background-color: #D1BF91;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
 .explica {
-    background-color: #54004C;
-    width: 25vw;
+    background-color: #60371E;
+    width: 24vw;
     left: 73%;
-    margin-top: 1%;
-    position: absolute;
+    bottom: 20vh;
+    position: relative;
     border-radius: 5px;
 }
 .explica p.texto {
-    font-size: 12pt;
-    font-weight: bold;
+    font-size: 10pt;
     color: wheat;
     font-family: Arial, sans-serif;
-    text-align: left;
+    text-align: justify;
     padding: 10px;
     width: 95%;
 }
-

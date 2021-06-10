@@ -1,19 +1,41 @@
+/* Color Theme Swatches in Hex */
+.Feng-Shui-Soft-Fire-II-1-hex { color: #D1BF91; }
+.Feng-Shui-Soft-Fire-II-2-hex { color: #60371E; }
+.Feng-Shui-Soft-Fire-II-3-hex { color: #A6341B; }
+.Feng-Shui-Soft-Fire-II-4-hex { color: #F9C743; }
+.Feng-Shui-Soft-Fire-II-5-hex { color: #C7C8C4; }
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 85%;
+    min-height: 100%;
+}
+#video{
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.205);
+  color: #f1f1f1;
+  width: 80%;
+  padding: 20px;
+  left: 15%;
+  margin: auto;
+}
+
+#menu {
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+    background-color: #60371E;
+    top: 0;
+    bottom: 0;
+}
 body {
     margin: 0px;
     height: 0px;
     width: 100vw;
-    background-color: #282A36;
+    background-color: #C7C8C4;
 }
-#menu {
-    position: fixed;
-    width: 20vw;
-    height: 100vh;
-    background-color: rgb(78, 6, 78);
-    margin-top: -4%;
-    padding-top: 6%;
-    padding-bottom: 2%;
-}
-
 #lista {
     display: block;
     margin: auto;
@@ -30,25 +52,34 @@ input[type=submit] {
 }
 .links-menu {
     text-decoration: none;
-    color: rgb(194, 185, 185);
+    color: #F9C743;
     margin: auto;   
 }
 .itens-menu {
     list-style: none;
     margin: 10px;
     font-family: arial, sans-serif;
-    font-size: 15pt;
+    font-size: 11pt;
     font-weight: bold;
     border-radius: 5px;
     word-wrap: break-word;   
 }
 li:hover {
     transition: cubic-bezier(0.27, 0.49, 0.48, 0.97) 0.5s;
-    background-color: teal;
+    background-color: #A6341B;
 }
 li {
     padding: 1%;
     margin: 2%;
     transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
 }
+hr {
+    background: linear-gradient(to right, #D1BF91, #60371E, #A6341B, #F9C743, #C7C8C4);
+    height: 3px;
+    border: none;
+    border-radius: 3px;
+  }
+
+ 
+
 

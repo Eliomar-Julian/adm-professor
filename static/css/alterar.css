@@ -1,14 +1,13 @@
 .corpo {
-    width: 50vw;
+    width: 40vw;
     height: auto;
-    background-color: teal;
+    background-color:transparent;
     margin: auto;
-    padding: 10px;
-    border-right: 1px solid white;
+    padding: 1%;
 }
 .tabela {
     margin: auto;
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     background-color: transparent;
 }
@@ -17,7 +16,7 @@ legend {
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    color: red;
+    color: #A6341B;
     margin: 1%;
 }
 h3 {
@@ -28,34 +27,34 @@ h3 {
     color: white;
 }
 button {
-    border: 1px solid white;
     color: white;
-    background-color: #282A36;
-    padding: 2%;
+    background-color: #A6341B;
+    padding: 1%;
     font-family: Arial, sans-serif;
-    margin: 2%;
+    margin: 1%;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 10pt;
+    border-radius: 5px;
+    border: none;
 }
 td {
-    border: 1px solid white;
-    font-size: 12pt;
+    font-size: 10pt;
     margin: 1%;
-    padding: 2%;
+    padding: 1%;
     
 }
 input[type=text] {
-    font-size: 11pt;
+    font-size: 10pt;
     color: black;
     font-family: Arial, sans-serif;
     width: 100%;
     margin: 1%;
-    padding: 1%;
+    padding: 2%;
 }
 
 input[type=number] {
-    font-size: 11pt;
+    font-size: 10pt;
     color: black;
     font-family: Arial, sans-serif;
     width: 100%;
@@ -64,24 +63,37 @@ input[type=number] {
 }
 th {
     font-family: Arial, sans-serif;
-    font-size: 15pt;
+    font-size: 10pt;
     font-weight: bold;
     color: white;
 }
 .explica {
-    width: 20vw;
+    width: 15vw;
     position: absolute;
-    background-color: #54004C;
+    background-color: #60371E;
     left: 77%;
-    top: 10%;
-    box-shadow: 1px 1px 5px rgba(211, 200, 200, 0.523);
+    top: 1%;
+    padding: 1%;
+    height: 80vh;
 }
 .explica p {
     font-size: 12pt;
-    color: rgb(206, 194, 194);
+    color: #D1BF91;
     font-family: Arial, sans-serif;
     font-weight: 200;
     text-align: left;
     padding: 1%;
 }
+
+div {
+    border-radius: 10px;
+}
+input{
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    padding: 1%;
+}
+
 

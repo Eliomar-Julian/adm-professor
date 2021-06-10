@@ -1,127 +1,85 @@
 @charset "utf-8";
-
-.principal{
-    width: 25vw;
-    margin: 1%;
-    background-color: teal;
-    height: auto;
-    float: left;
-    margin-top: 1%;
-    border-radius: 5px;
-    font-size: 14pt;
-    font-family: Arial, sans-serif;
-    color: rgb(167, 159, 159);
+#borrar {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: url("../img/icons/carros.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
     
 }
-.principal-2{
-    width: 25vw;
+
+.principal{
+    width: 50vw;
     margin: 1%;
-    background-color: teal;
-    height: 25vh;
-    float: left;
+    background-color: transparent;
+    height: auto;
     margin-top: 1%;
     border-radius: 5px;
-    font-size: 14pt;
+    font-size: 10pt;
     font-family: Arial, sans-serif;
     color: rgb(167, 159, 159);
-    
 }
 #principal-1 {
     margin-left: 20%;
     height: 55vh;
 }
 #explica {
-    background-color: #54004C;
-    color: rgb(196, 179, 179);
+    background-color: #60371E;
+    color: #D1BF91;
     font-family: Arial, sans-serif;
     padding: 1%;
-    width: 19vw;
-    height: 30vw;
+    width: 23vw;
+    top: 1%;
+    height: 90vh;
     position: absolute;
-    left: 75%;
-}
-#form-1 {
-    background-color: rgba(14, 14, 15, 0.462);
-    padding: 2%;
-    height: 45vh;
-    width: 90%;
-    margin: auto;
-}
-#form-2 {
-    background-color: rgba(14, 14, 15, 0.462);
-    padding: 2%;
-    height: 15vh;
-    width: 90%;
-    margin: auto;
+    left: 70%;
+    text-align: justify;
 }
 button {
-    background-color: #282A35;
-    border: 1px solid white;
-    padding: 2%;
+    background-color: #A6341B;
+    padding: 1%;
     font-family: Arial, sans-serif;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: 300;
     color: white;
     margin: auto;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 input {
-    margin-top: 2%;
+    margin: 2%;
+    width: 70%;
+    border-radius: 5px;
+    padding: 3%;
+    border: none;
+    background-color: #D1BF91;
+    color: #60371E;
+}
+input:focus {
+    background-color: #ffffff;
+    outline: #A6341B;
 }
 #mais {
     padding: 5%;
 }
 
-h1 {
+.h1 {
     font-family: Arial, sans-serif;
     font-weight: bold;
     color: white;
     text-align: center;
     margin: auto;
 }
-
-#tema {
-    background-color: rgba(12, 11, 11, 0.476);
-    display: flex;
-    align-items: center;
-}
-
-
-/*--- esquema de cores  */
-
-#temas {
-    width: 25vw;
-    height: 45vh;
-    position: absolute;
-    background-color: teal;
-    left: 47%;
-    top: 35%;
-    border-radius: 5px;    
-}
-#padrao {
-    background-image: linear-gradient(
-        to right, rgb(220, 214, 214) 10%, #5A004A 60%, #282A35 80%);
-    padding: 1pt;
+fieldset {
     border-radius: 5px;
+    color: #A6341B;
+    border: 1px solid #A6341B;
 }
-#gruvbox {
-    background-image: linear-gradient(
-        to right, rgb(220, 214, 214) 10%, #ED4933 60%, #1D2021 80%);
-    padding: 1pt;
-    border-radius: 5px;
-    margin-top: 1pt;
-}
-#dracula {
-    background-image: linear-gradient(
-        to right, rgb(220, 214, 214) 10%, #BD93F9 60%, #282A36 80%);
-    padding: 1pt;
-    border-radius: 5px;
-    margin-top: 1pt;
-}
-#monokai {
-    background-image: linear-gradient(
-        to right, rgb(220, 214, 214) 10%, #44B7EF 60%, #272822 80%);
-    padding: 1pt;
-    border-radius: 5px;
-    margin-top: 1pt;
-}
-

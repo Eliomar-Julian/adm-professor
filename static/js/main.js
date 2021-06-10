@@ -1,4 +1,5 @@
 // calcula a media no front end da pagina de perfil individual..............
+window.onload = calculaMedia;
 
 function calculaMedia(){
   let tds = document.getElementsByTagName("td");
@@ -29,29 +30,25 @@ function calculaMedia(){
 // gera o PDF da funcao de perfil individual....................................
 
 function printData() {
-    let divToPrint = document.getElementById("tabela");
-    let total = document.getElementById("total");
-    let media = document.getElementById("media");
+    let divToPrint = document.getElementsByClassName("div-infos")[0];
     let th = document.getElementsByTagName("th");
     let td = document.getElementsByTagName("td");
     let nomee = document.getElementsByTagName("h1")[1];
     let newWin = window.open("");
+    newWin.document.body.style = `width: 100vw; display: flex; align-items: center;`
     for (var i = 0; i < th.length; i++) {
-      th[i].style = `padding: 1%; color: red; margin: 1%; border: 1px solid black; 
+      th[i].style = `padding: 1%; color: red; margin: auto; border: 1px solid black; 
                       font-size: 15pt; font-family: Arial, sans-serif; margin: 1%;`
     }
     for (var i = 0; i < td.length; i++) {
-      td[i].style = `padding: 1%; color: black; margin: 1%; border-right: 1px solid black; 
+      td[i].style = `padding: 1%; color: black; margin: auto; 
         font-size: 11pt; font-family: Arial, sans-serif; margin: 1%;border-bottom: 1px solid black`
     }
-    divToPrint.setAttribute("style", "margin:auto");
-    divToPrint.setAttribute("style", "width:80vw");
+    divToPrint.style = `margin: auto; width: 100vw;`;
     newWin.document.write("Nome: " + nomee.innerText.toUpperCase());
     newWin.document.write(divToPrint.outerHTML);
-    newWin.document.write("TOTAL:&nbsp;&nbsp;&nbsp;" + total.outerHTML + "<br>");
-    newWin.document.write("MÉDIA:&nbsp;&nbsp;&nbsp;" + media.outerHTML);
     newWin.print();
-    newWin.close();
+    //newWin.close();
     atualizar();
   }
 
@@ -121,14 +118,15 @@ let alerta = document.createElement("h3");
 let botaoNotas = document.getElementById("insereNotas");
 formulario.addEventListener("click", mudanca);
 alerta.innerText = `* Os campos de notas não podem ficar vazios *`;
-alerta.style = `color: red;`;
+alerta.style = `color: #A6341B;`;
 
 function mudanca(){
-  notificacao[2].innerHTML = `Clique em <strong style="color: red; background: orange;">
+  notificacao[2].innerHTML = `Clique em <strong style="color: #A6341B; background: #F9C743; padding: 1%;border-radius: 5px;">
       Atualizar tabela</strong> caso queira limpar os campos.`;
-  notificacao[2].style = "font-size: 12pt; color: orange; background-color: red; padding: 1%;"
+  notificacao[2].style = "font-size: 10pt; color: #F9C743; background-color: #60371E; padding: 1%; border-radius: 5px;"
 }
 function checarNotas(){
+  console.log(filhos);
   if (!filhos[8].value || !filhos[12].value){
     formulario.insertBefore(alerta, filhos[14]);
     return;

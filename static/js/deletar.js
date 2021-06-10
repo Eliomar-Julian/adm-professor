@@ -1,4 +1,7 @@
 let nomee;
+document.addEventListener("dblclick", (e) => {
+    autoOrganizar();
+})
 
 function abrirMsg(nome=null){
     let msg = document.getElementById('mensagem-delete');

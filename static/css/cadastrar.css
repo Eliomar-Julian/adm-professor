@@ -1,19 +1,25 @@
 @charset "utf-8";
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 #cadastrar {
-    width: 35vw;
+    order: 0;
+    width: 45vw;
     margin:auto;
-    background-color: teal;
+    background-color: #c7c8c4d5;
     padding: 10px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
-    color: rgb(211, 15, 15);
+    color: #D1BF91;
     font-size: 12pt;
+    height: 80vh;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    border-right: 1px solid white;
 }
 .mensagem-erro {
-    color: rgba(255, 0, 0, 0.558);
+    color: #60371E;
     font-family: Arial, sans-serif;
     margin: 0px;
     text-align: center;
@@ -23,18 +29,19 @@ input {
     width: 90%;
     margin: 3px;
     height: 25pt;
-    background-color: #282A35;
-    color: white;
+    border: 1px solid #F9C743;
+    color: black;
     font-size: 12pt;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 2%;
    
 }
 
 input:focus{
-    background-color: white;
-    color: teal;
-    outline-color: orange;
-    outline-style: solid;
-    outline-width: 1px;
+    background-color: #f5f3ef;
+    color: #60371E;
 }
 
 
@@ -44,13 +51,17 @@ fieldset {
     display: flex;
     align-items: center;
     border-collapse: collapse;
-    background-color: #54004C;
-    color: white;
+    background-color: #C7C8C4;
+    color: #D1BF91;
+    outline: #A6341B;
+    border: none;
 }
 input[type=file] {
     width: max-content;
     height: 25pt;
-    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 1%;
     margin-top: 10pt;
     background-color: transparent;
 }
@@ -59,29 +70,83 @@ input[type=radio] {
     width: 3%;
     
 }
-
+input[type=button] {
+    background-color: #A6341B;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #D1BF91;
+    padding: 2%;
+}
+input[type=reset]{
+    background-color: #A6341B;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    color: #D1BF91;
+    padding: 2%;
+}
 select {
     height: 25pt;
     margin-top: 10pt;
+    border-radius: 5px;
+    border: none;
 }
 label {
     margin-left: 15%;
     word-wrap: break-word;
+    color: #A6341B;
 }
 .h1 {
     text-align: center;
     font-size: 14pt;
+    color: #A6341B;
 }
 .lateral {
     width: 20vw;
-    height: auto;
-    background-color: #54004C;
-    color: rgb(198, 190, 190);
+    height: 90vh;
+    text-align: justify;
+    background-color: #60371E;
+    color: #D1BF91;
     font-family: Arial, sans-serif;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.523);
-    position: absolute;
-    top: 10%;
-    left: 75%;
+    position: fixed;
+    top: 1%;
+    left: 77%;
     border-radius: 5px;
     padding: 1%;
+}
+legend{
+    color: #A6341B;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #7b6079;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #de8971;
+    border-radius: 2px;    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(117, 12, 12, 0.489);
+  }
+  #borrar {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #c7c8c475;
+    z-index: -1;
+    background-image: url("../img/icons/home.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
 }
